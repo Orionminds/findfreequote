@@ -825,6 +825,74 @@
         .hidden-form {
             display: none;
         }
+
+        .benefit-grid {
+            display: grid;
+            gap: 20px;
+            margin: 40px 0 70px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (max-width: 639px) {
+            .benefit-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+            .logo-container {
+                max-width: 280px;
+            }
+            .brand-logo {
+                max-height: 70px;
+            }
+        }
+        
+        @media (min-width: 640px) and (max-width: 1023px) {
+            .benefit-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .benefit-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 10px;
+            height: 100%;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px -5px rgba(26,123,0,0.25);
+        }
+        
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 28px;
+            box-shadow: 0 4px 8px rgba(26,123,0,0.2);
+        }
+        
     </style>
 </head>
 <body>
@@ -856,6 +924,44 @@
             </div>
         </div>
     </div>
+
+      <div class="benefit-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon"><span class="material-icons">grass</span></div>
+                <h3>Lush Green Lawn</h3>
+                <p>Professional treatments for thicker, greener grass all season</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><span class="material-icons">verified</span></div>
+                <h3>Guaranteed Results</h3>
+                <p>Our TruGreen Guarantee backs every service</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><span class="material-icons">pest_control</span></div>
+                <h3>Weed & Pest Control</h3>
+                <p>Targeted treatments to eliminate lawn invaders</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><span class="material-icons">water_drop</span></div>
+                <h3>Smart Irrigation</h3>
+                <p>Water management for healthier grass</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><span class="material-icons">schedule</span></div>
+                <h3>Convenient Scheduling</h3>
+                <p>Flexible service appointments that work for you</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><span class="material-icons">science</span></div>
+                <h3>Expert Science</h3>
+                <p>PhD-certified specialists customize your plan</p>
+            </div>
+        </div>
     
     <!-- Floating CTA -->
     <div class="floating-cta">
@@ -866,7 +972,9 @@
         <p class="disclaimer">Limited time offer. By clicking, you agree to our <a href="https://www.trugreen.com/privacy-policy" style="color: var(--primary);">Privacy Policy</a>. Offer expires 05/31/2025.</p>
     </div>
 
-    <!-- Multi-Step Form Wizard -->
+   
+
+  <!-- Multi-Step Form Wizard -->
     <div class="wizard-overlay" id="wizardOverlay">
         <div class="wizard-container">
             <!-- Progress Indicator -->
@@ -883,9 +991,6 @@
                     </div>
                     <div class="progress-step" id="step3Indicator">
                         <span class="step-number">3</span>
-                    </div>
-                    <div class="progress-step" id="step4Indicator">
-                        <span class="step-number">4</span>
                     </div>
                 </div>
             </div>
@@ -913,44 +1018,11 @@
                 </div>
             </div>
 
-            <!-- Step 2: Contact Info -->
+            <!-- Step 2: Name and Email -->
             <div class="step-content" id="step2">
                 <div class="step-header">
-                    <h2 class="step-title">How can we contact you?</h2>
-                    <p class="step-subtitle">We'll send your 75% discount code and schedule your free analysis</p>
-                </div>
-                <div class="input-group">
-                    <label for="email">Email Address</label>
-                    <div class="input-wrapper">
-                        <input type="email" id="email" class="input-field" placeholder="youremail@example.com">
-                        <span class="material-icons input-icon">email</span>
-                        <span class="material-icons valid-indicator">check_circle</span>
-                        <span class="material-icons error-indicator">error</span>
-                        <div class="error-message">Please enter a valid email address</div>
-                    </div>
-                </div>
-                <div class="input-group">
-                    <label for="phone">Phone Number</label>
-                    <div class="input-wrapper">
-                        <input type="tel" id="phone" class="input-field" placeholder="(555) 555-5555">
-                        <span class="material-icons input-icon">phone</span>
-                        <span class="material-icons valid-indicator">check_circle</span>
-                        <span class="material-icons error-indicator">error</span>
-                        <div class="error-message">Please enter a valid phone number</div>
-                    </div>
-                </div>
-                <div class="button-group">
-                    <button class="btn-continue" id="step2Continue">
-                        CONTINUE
-                    </button>
-                </div>
-            </div>
-
-            <!-- Step 3: Name -->
-            <div class="step-content" id="step3">
-                <div class="step-header">
-                    <h2 class="step-title">Tell us your name</h2>
-                    <p class="step-subtitle">We'll personalize your lawn care experience</p>
+                    <h2 class="step-title">Tell us about yourself</h2>
+                    <p class="step-subtitle">We'll personalize your window replacement experience</p>
                 </div>
                 <div class="input-group">
                     <label for="fullname">Full Name</label>
@@ -962,18 +1034,38 @@
                         <div class="error-message">Please enter your full name</div>
                     </div>
                 </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" class="input-field" placeholder="youremail@example.com">
+                        <span class="material-icons input-icon">email</span>
+                        <span class="material-icons valid-indicator">check_circle</span>
+                        <span class="material-icons error-indicator">error</span>
+                        <div class="error-message">Please enter a valid email address</div>
+                    </div>
+                </div>
                 <div class="button-group">
-                    <button class="btn-continue" id="step3Continue">
+                    <button class="btn-continue" id="step2Continue">
                         CONTINUE
                     </button>
                 </div>
             </div>
 
-            <!-- Step 4: Service Address -->
-            <div class="step-content" id="step4">
+            <!-- Step 3: Phone and Address -->
+            <div class="step-content" id="step3">
                 <div class="step-header">
-                    <h2 class="step-title">One more thing!</h2>
-                    <p class="step-subtitle">Where should our lawn experts visit?</p>
+                    <h2 class="step-title">How can we reach you?</h2>
+                    <p class="step-subtitle">Where should our window experts visit?</p>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <div class="input-wrapper">
+                        <input type="tel" id="phone" class="input-field" placeholder="(555) 555-5555">
+                        <span class="material-icons input-icon">phone</span>
+                        <span class="material-icons valid-indicator">check_circle</span>
+                        <span class="material-icons error-indicator">error</span>
+                        <div class="error-message">Please enter a valid phone number</div>
+                    </div>
                 </div>
                 <div class="input-group">
                     <label for="address">Street Address</label>
@@ -986,7 +1078,7 @@
                     </div>
                 </div>
                 <div class="button-group">
-                    <button class="btn-continue btn-submit" id="step4Continue">
+                    <button class="btn-continue btn-submit" id="step3Continue">
                         Claim 75% Discount Now
                     </button>
                 </div>
@@ -999,11 +1091,11 @@
                         <span class="material-icons">check</span>
                     </div>
                     <h2 class="step-title">Success! Your 75% Discount is Reserved</h2>
-                    <p class="step-subtitle">Check your email in the next 5 minutes for your discount code and instructions to schedule your free professional lawn analysis.</p>
+                    <p class="step-subtitle">Check your email in the next 5 minutes for your discount code and instructions to schedule your free in-home window consultation.</p>
                     <div class="loading-bar">
                         <div class="loading-progress"></div>
                     </div>
-                    <p style="color: var(--gray); font-size: 0.9rem; margin-top: 20px;">Redirecting you to your personalized lawn care plan...</p>
+                    <p style="color: var(--gray); font-size: 0.9rem; margin-top: 20px;">Redirecting you to your personalized window replacement plan...</p>
                 </div>
             </div>
         </div>
@@ -1015,7 +1107,7 @@
         <input type="hidden" name="zc_gad" id="zc_gad" value=""></input>
         <input type="text" style="display:none;" name="xmIwtLD" value="721bc3ba8e105bff1a95c91fff1f6f74cc2baa66264ec411114deeae1596350d5bac2d313098ef7827ca7a4403ec4736"></input>
         <input type="text" style="display:none;" name="actionType" value="TGVhZHM="></input>
-        <input type="text" style="display:none;" name="returnURL" value="https://findfreequote.com/freequote/trugreen"></input>
+        <input type="text" style="display:none;" name="returnURL" value="https://findfreequote.com/freequote/renewalbyandersen"></input>
         <input type="text" id="First_Name" name="First Name" maxlength="40"></input>
         <input type="text" id="Last_Name" name="Last Name" maxlength="80"></input>
         <input type="text" ftype="email" id="Email" name="Email" maxlength="100"></input>
@@ -1039,15 +1131,15 @@
         const progressFill = document.getElementById('progressFill');
         
         // Step Elements
-        const steps = ['step1', 'step2', 'step3', 'step4', 'successStep'];
-        const stepIndicators = ['step1Indicator', 'step2Indicator', 'step3Indicator', 'step4Indicator'];
+        const steps = ['step1', 'step2', 'step3', 'successStep'];
+        const stepIndicators = ['step1Indicator', 'step2Indicator', 'step3Indicator'];
         
         // Form Fields
         const fields = {
             zipcode: document.getElementById('zipcode'),
+            fullname: document.getElementById('fullname'),
             email: document.getElementById('email'),
             phone: document.getElementById('phone'),
-            fullname: document.getElementById('fullname'),
             address: document.getElementById('address')
         };
         
@@ -1055,26 +1147,28 @@
         let currentStep = 0;
         
         // Google Apps Script Web App URL
-        const googleSheetScriptUrl = 'https://script.google.com/macros/s/AKfycbxjjuhMgWW9vUdx3FnXpeWAUNlV9ILRpKos6TR7yLaWc8lH5HRONNWopFnwMw190YWdtw/exec';
+        const googleSheetScriptUrl = 'https://script.google.com/macros/s/AKfycbxjjuhMgWW9vUdx3FnXpeWAUNlV9ILRpKos6TR7yLaWc8l slags5HRONNWopFnwMw190YWdtw/exec';
         
         // Zoho Form URL
         const zohoFormUrl = 'https://crm.zoho.in/crm/WebToLeadForm';
         
         // Start wizard
-        startWizardBtn.addEventListener('click', function() {
-            wizardOverlay.classList.add('wizard-active');
-            document.body.style.overflow = 'hidden';
-            currentStep = 0;
-            showStep(0);
-            updateProgress();
-            
-            if(typeof gtag !== 'undefined') {
-                gtag('event', 'wizard_start', {
-                    'event_category': 'Lead',
-                    'event_label': 'MultiStep_Wizard_Open'
-                });
-            }
-        });
+        if (startWizardBtn) {
+            startWizardBtn.addEventListener('click', function() {
+                wizardOverlay.classList.add('wizard-active');
+                document.body.style.overflow = 'hidden';
+                currentStep = 0;
+                showStep(0);
+                updateProgress();
+                
+                if(typeof gtag !== 'undefined') {
+                    gtag('event', 'wizard_start', {
+                        'event_category': 'Lead',
+                        'event_label': 'MultiStep_Wizard_Open'
+                    });
+                }
+            });
+        }
         
         // Close wizard functionality - disabled but kept for potential future use
         function closeWizard() {
@@ -1125,7 +1219,7 @@
         
         // Update progress bar
         function updateProgress() {
-            const progress = ((currentStep + 1) / 4) * 100;
+            const progress = ((currentStep + 1) / 3) * 100; // Updated to 3 steps
             progressFill.style.width = `${progress}%`;
         }
         
@@ -1176,24 +1270,24 @@
             }
         });
         
-        // Step 2: Contact Info
+        // Step 2: Name and Email
         document.getElementById('step2Continue').addEventListener('click', function() {
+            const fullname = fields.fullname.value;
             const email = fields.email.value;
-            const phone = fields.phone.value;
             let isValid = true;
+            
+            if (!validateNotEmpty(fullname)) {
+                fields.fullname.classList.add('error');
+                isValid = false;
+            } else {
+                fields.fullname.classList.remove('error');
+            }
             
             if (!validateEmail(email)) {
                 fields.email.classList.add('error');
                 isValid = false;
             } else {
                 fields.email.classList.remove('error');
-            }
-            
-            if (!validatePhone(phone)) {
-                fields.phone.classList.add('error');
-                isValid = false;
-            } else {
-                fields.phone.classList.remove('error');
             }
             
             if (!isValid) return;
@@ -1205,50 +1299,39 @@
             if(typeof gtag !== 'undefined') {
                 gtag('event', 'wizard_step2_complete', {
                     'event_category': 'Lead',
-                    'event_label': 'Contact_Info_Entered'
+                    'event_label': 'Name_Email_Entered'
                 });
             }
         });
         
-        // Step 3: Name
+        // Step 3: Phone and Address
         document.getElementById('step3Continue').addEventListener('click', function() {
-            const fullname = fields.fullname.value;
-            
-            if (!validateNotEmpty(fullname)) {
-                fields.fullname.classList.add('error');
-                return;
-            }
-            
-            fields.fullname.classList.remove('error');
-            currentStep = 3;
-            showStep(3);
-            updateProgress();
-            
-            if(typeof gtag !== 'undefined') {
-                gtag('event', 'wizard_step3_complete', {
-                    'event_category': 'Lead',
-                    'event_label': 'Name_Entered'
-                });
-            }
-        });
-        
-        // Step 4: Service Address
-        document.getElementById('step4Continue').addEventListener('click', function() {
+            const phone = fields.phone.value;
             const address = fields.address.value;
+            let isValid = true;
+            
+            if (!validatePhone(phone)) {
+                fields.phone.classList.add('error');
+                isValid = false;
+            } else {
+                fields.phone.classList.remove('error');
+            }
             
             if (!validateNotEmpty(address)) {
                 fields.address.classList.add('error');
-                return;
+                isValid = false;
+            } else {
+                fields.address.classList.remove('error');
             }
             
-            fields.address.classList.remove('error');
+            if (!isValid) return;
             
             // Submit form data
             submitFormData();
             
             // Show success step
-            currentStep = 4;
-            showStep(4);
+            currentStep = 3;
+            showStep(3);
             
             if(typeof gtag !== 'undefined') {
                 gtag('event', 'conversion', {
@@ -1267,11 +1350,11 @@
             }, 100);
             
             // Redirect after 3 seconds
-           setTimeout(function() {
-    // Pass lead source as URL parameter
-    const leadSource = document.getElementById('Lead_Source').value;
-    window.location.href = `../offer-wall/index.html?leadSource=${encodeURIComponent(leadSource)}`;
-}, 3000);
+            setTimeout(function() {
+                // Pass lead source as URL parameter
+                const leadSource = document.getElementById('Lead_Source').value;
+                window.location.href = `../offer-wall/index.html?leadSource=${encodeURIComponent(leadSource)}`;
+            }, 3000);
         });
         
         // Submit form data
@@ -1313,7 +1396,7 @@
             zohoFormData.append('zc_gad', '');
             zohoFormData.append('xmIwtLD', '721bc3ba8e105bff1a95c91fff1f6f74cc2baa66264ec411114deeae1596350d5bac2d313098ef7827ca7a4403ec4736');
             zohoFormData.append('actionType', 'TGVhZHM=');
-            zohoFormData.append('returnURL', 'https://findfreequote.com/freequote/trugreen');
+            zohoFormData.append('returnURL', 'https://findfreequote.com/freequote/renewalbyandersen');
             zohoFormData.append('First Name', firstName);
             zohoFormData.append('Last Name', lastName);
             zohoFormData.append('Email', formData.email);
@@ -1385,10 +1468,12 @@
         });
         
         // CTA animation
-        setInterval(() => {
-            startWizardBtn.style.animation = 'unlockPulse 1.5s';
-            setTimeout(() => startWizardBtn.style.animation = '', 1500);
-        }, 5000);
+        if (startWizardBtn) {
+            setInterval(() => {
+                startWizardBtn.style.animation = 'unlockPulse 1.5s';
+                setTimeout(() => startWizardBtn.style.animation = '', 1500);
+            }, 5000);
+        }
         
         // Handle focus and blur events for input fields
         Object.values(fields).forEach(field => {
