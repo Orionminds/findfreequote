@@ -452,18 +452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             setInterval(() => {
                 cta.style.animation = 'unlockPulse 1.5s';
                 setTimeout(() => cta.style.animation = '', 1500);
-            }, 5000);
-            
-            // Track regular event when CTA is clicked
-            cta.addEventListener('click', function() {
-                if(typeof gtag !== 'undefined') {
-                    gtag('event', 'click', {
-                        'event_category': 'CTA',
-                        'event_label': 'Windows_Doors_Quote'
-                    });
-                    console.log('CTA clicked - tracking event and conversion');
-                }
-            });
+            }, 5000););
         });
     </script>
 </body>
