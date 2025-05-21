@@ -462,6 +462,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Google Ads Conversion Tracking Script -->
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const cta = document.getElementById('unlockCta');
+  if (cta) {
+    cta.addEventListener('click', function () {
+      gtag('event', 'get_quote_click', {
+        event_category: 'engagement',
+        event_label: 'Unlock CTA Click',
+        value: 1
+      });
+    });
+  }
+});
+</script>
 
 
     <script>
