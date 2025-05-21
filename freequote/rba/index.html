@@ -429,7 +429,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
         <p class="disclaimer">By clicking, you agree to our <a href="https://www.renewalbyandersen.com/privacy-policy" style="color: var(--primary);">Privacy Policy</a>. Offer expires 31/05/2025.</p>
     </div>
-<!-- Google Ads Conversion Tracking Script -->
+
 <!-- Google Ads Conversion Tracking Script -->
 <script>
 function gtag_report_conversion(url) {
@@ -449,7 +449,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const quoteButton = document.getElementById('unlockCta');
   if (quoteButton) {
     quoteButton.addEventListener('click', function (event) {
-      event.preventDefault(); // Prevent immediate navigation
       gtag_report_conversion(this.href); // Track and redirect
     });
   }
