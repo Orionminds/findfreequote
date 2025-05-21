@@ -9,12 +9,27 @@
     <!-- Meta Tags -->
     <meta name="description" content="Get your FREE windows and doors quote from Renewal by Andersen today! Energy-efficient replacement with lifetime warranty.">
     
-    <!-- Google Tag Manager -->
-   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KKDQ3DP5');</script>
+<!-- Google Ads Conversion Tracking Script -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17012796761"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17012796761');
+
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_',
+        'event_callback': callback
+    });
+    return false;
+  }
+</script>
     <!-- End Google Tag Manager -->
    <script>
     (function(h,o,t,j,a,r){
@@ -422,38 +437,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     
     <!-- Floating CTA -->
-    <div class="floating-cta">
-        <a href="https://www.askhomequote.com/c/da2955792faaf?subsource=2005" data-track="quote-button" class="cta-button" id="unlockCta">
-            <span class="material-icons unlock-icon">lock_open</span>
-            <span>GET FREE QUOTE</span>
-        </a>
-        <p class="disclaimer">By clicking, you agree to our <a href="https://www.renewalbyandersen.com/privacy-policy" style="color: var(--primary);">Privacy Policy</a>. Offer expires 31/05/2025.</p>
-    </div>
+   <!-- Floating CTA -->
+<div class="floating-cta">
+    <a href="https://www.askhomequote.com/c/da2955792faaf?subsource=2005" 
+       data-track="quote-button" 
+       class="cta-button" 
+       id="unlockCta" 
+       onclick="return gtag_report_conversion('https://www.askhomequote.com/c/da2955792faaf?subsource=2005')">
+        <span class="material-icons unlock-icon">lock_open</span>
+        <span>GET FREE QUOTE</span>
+    </a>
+    <p class="disclaimer">By clicking, you agree to our <a href="https://www.renewalbyandersen.com/privacy-policy" style="color: var(--primary);">Privacy Policy</a>. Offer expires 31/05/2025.</p>
+</div>
 
 <!-- Google Ads Conversion Tracking Script -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) !== 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-    'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_',
-    'event_callback': callback
-  });
-  return false;
-}
 
-document.addEventListener('DOMContentLoaded', function () {
-  const quoteButton = document.getElementById('unlockCta');
-  if (quoteButton) {
-    quoteButton.addEventListener('click', function (event) {
-      gtag_report_conversion(this.href); // Track and redirect
-    });
-  }
-});
-</script>
 
 
     <script>
