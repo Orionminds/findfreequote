@@ -146,7 +146,7 @@
         @media (max-width: 639px) {
             .benefit-grid {
                 grid-template-columns: 1fr;
-                padding: 0 10px;
+                padding: 0 15px;
             }
             .logo-container {
                 max-width: 280px;
@@ -318,6 +318,491 @@
             font-size: 14px;
             letter-spacing: 0.5px;
         }
+
+        /* Our Plans Section */
+        .plans-section {
+            background: var(--light);
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .plans-section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .plans-section p {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .plans-grid {
+            display: grid;
+            gap: 15px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 639px) {
+            .plans-grid {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+        }
+
+        @media (min-width: 640px) and (max-width: 1023px) {
+            .plans-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .plans-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+        }
+
+        .plan-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            text-align: center;
+            position: relative;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(24,42,240,0.2);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: var(--dark);
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .plan-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-size: 24px;
+            box-shadow: 0 3px 6px rgba(24,42,240,0.2);
+        }
+
+        .plan-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .plan-card p {
+            font-size: 0.85rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .plan-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+            text-align: left;
+            font-size: 0.8rem;
+        }
+
+        .plan-card ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .plan-card ul li:before {
+            content: '✔';
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-size: 1rem;
+        }
+
+        .plan-card .cta-button {
+            background: #1928f4;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        .plan-card .cta-button:hover {
+            background: var(--primary);
+        }
+
+        /* Why Home Warranties Matter Section */
+        .understanding-section {
+            background: var(--light);
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .understanding-section h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .understanding-section p {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .understanding-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .understanding-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .understanding-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .issues-solutions-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .issue-card, .solution-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+        }
+
+        .issue-card h4, .solution-card h4 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .issue-card ul, .solution-card ul {
+            list-style: none;
+            padding: 0;
+            font-size: 0.85rem;
+        }
+
+        .issue-card ul li, .solution-card ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .issue-card ul li:before {
+            content: '✖';
+            color: red;
+            position: absolute;
+            left: 0;
+            font-size: 1rem;
+        }
+
+        .solution-card ul li:before {
+            content: '✔';
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 767px) {
+            .understanding-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .understanding-image {
+                max-width: 100%;
+                order: -1;
+                margin-bottom: 15px;
+            }
+            .understanding-text {
+                text-align: center;
+            }
+            .issues-solutions-grid {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            .issue-card, .solution-card {
+                max-width: 100%;
+            }
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .testimonials-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 30px;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .rating-stars {
+            color: #ffd100; /* Using AHS accent color for stars */
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+
+        .carousel-button.prev {
+            left: 10px;
+        }
+
+        .carousel-button.next {
+            right: 10px;
+        }
+
+        /* Mobile-specific adjustments for testimonials */
+        @media (max-width: 639px) {
+            .testimonials-section {
+                padding: 20px 15px;
+            }
+            .testimonials-title {
+                font-size: 1.2rem;
+            }
+            .carousel-container {
+                padding: 0 30px;
+            }
+            .carousel-button {
+                padding: 6px;
+                font-size: 0.9rem;
+            }
+            .testimonial-text {
+                font-size: 0.9rem;
+            }
+            .testimonial-author {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* We Sweat the Small Stuff Section */
+        .assurances-section {
+            background: var(--light);
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .assurances-section h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .assurances-section p {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .assurances-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .assurances-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .assurances-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .assurances-text ul {
+            list-style: none;
+            padding: 0;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .assurances-text ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .assurances-text ul li:before {
+            content: '✔';
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-size: 1rem;
+        }
+
+        .guarantee-badge {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .guarantee-badge h4 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .guarantee-badge p {
+            font-size: 0.85rem;
+            color: var(--dark);
+        }
+
+        .assurances-section .cta-button {
+            padding: 12px 20px;
+            font-size: 1rem;
+            margin: 20px auto 0;
+            display: inline-flex;
+            max-width: 300px;
+        }
+
+        @media (max-width: 767px) {
+            .assurances-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .assurances-image {
+                max-width: 100%;
+                order: -1;
+                margin-bottom: 15px;
+            }
+            .assurances-text {
+                text-align: center;
+            }
+            .assurances-text ul {
+                text-align: left;
+            }
+            .guarantee-badge {
+                text-align: center;
+            }
+            .assurances-section .cta-button {
+                max-width: 100%;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -325,7 +810,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKDQ3DP5"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div style="background-color: red; color:white;"class="limited-offer-banner">
+    <div style="background-color: red; color:white;" class="limited-offer-banner">
     Hurry, limited time only! Up to 50% off*
     </div>
     <div class="container">
@@ -386,7 +871,151 @@
                 <p>Annual HVAC maintenance included with ShieldPlatinum</p>
             </div>
         </div>
+
+        <!-- Our Plans Section -->
+        <div class="plans-section">
+            <h2>Our Plans</h2>
+            <p>Protection for your home systems, appliances, and more—find the plan that fits.</p>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-icon"><span class="material-icons">shield</span></div>
+                    <h3>ShieldSilver™</h3>
+                    <p>Protects parts of 14 major systems (HVAC, plumbing, electrical).</p>
+                    <ul>
+                        <li>Up to $50,000 total limit</li>
+                        <li>$5,000 per HVAC system</li>
+                    </ul>
+                    <a href="https://www.askhomequote.com/c/2fb2170b2ddd2?subsource=2005" class="cta-button" id="unlockCta">
+            <span>SEE PRICING</span>
+        </a>
+                   
+                </div>
+                <div class="plan-card">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-icon"><span class="material-icons">shield</span></div>
+                    <h3>ShieldGold™</h3>
+                    <p>Covers parts of 23 major systems and appliances.</p>
+                    <ul>
+                        <li>Video chat with repair Experts*</li>
+                        <li>Up to $50,000 total limit</li>
+                        <li>$2,000 per appliance</li>
+                    </ul>
+                     <a href="https://www.askhomequote.com/c/2fb2170b2ddd2?subsource=2005" class="cta-button" id="unlockCta">
+            <span>SEE PRICING</span>
+        </a>
+                </div>
+                <div class="plan-card">
+                    <div class="plan-icon"><span class="material-icons">shield</span></div>
+                    <h3>ShieldPlatinum™</h3>
+                    <p>Covers 23 systems/appliances, plus roof leak repairs.</p>
+                    <ul>
+                        <li>Video chat with repair Experts*</li>
+                        <li>Up to $50,000 total limit</li>
+                        <li>$1,000 roof leak repair</li>
+                    </ul>
+                      <a href="https://www.askhomequote.com/c/2fb2170b2ddd2?subsource=2005" class="cta-button" id="unlockCta">
+            <span>SEE PRICING</span>
+        </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Home Warranties Matter Section -->
+        <div class="understanding-section">
+            <h2>Why Home Warranties Matter</h2>
+            <p>Covers everyday system and appliance issues your insurance doesn’t.</p>
+            <div class="understanding-content">
+                <img src="https://www.ahs.com/siteassets/web-experiments/mecv3_understanding-home-warranties_compressed.jpg" alt="Team member greeting at door" class="understanding-image">
+                <div class="understanding-text">
+                    <p>American Home Shield's reliable home warranty plans help take care of covered repair costs and keep homeowners happy.</p>
+                    <div class="issues-solutions-grid">
+                        <div class="issue-card">
+                            <h4>Common Issues</h4>
+                            <ul>
+                                <li>AC or fridge breaking down?</li>
+                                <li>Finding a reliable contractor?</li>
+                                <li>Expensive, unexpected repairs?</li>
+                            </ul>
+                        </div>
+                        <div class="solution-card">
+                            <h4>Our Solutions</h4>
+                            <ul>
+                                <li>Covers all ages, no records needed</li>
+                                <li>One call to AHS for a trusted Pro</li>
+                                <li>We fix or replace—24/7 service</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="container">
+            <div class="testimonials-section">
+                <h3 class="testimonials-title">What Customers are saying</h3>
+                <div class="carousel-container">
+                    <div class="carousel" id="testimonialsCarousel">
+                        <div class="carousel-item">
+                            <p class="testimonial-text">"I have had a great experience with AHS over the last 7 1/2 years. They cover what they say that they are going to cover on your policy. If you are not satisfied, you can call and they will send someone else out. The wait time for some providers is better than others but overall, I will definitely use them at our next house."</p>
+                            <p class="testimonial-author">Brenda A.</p>
+                            <div class="rating-stars">★★★★★</div>
+                        </div>
+                        <div class="carousel-item">
+                            <p class="testimonial-text">"Everything went smoothly and efficiently. We had a parts delay of a couple weeks, but it is what it is. Overall great!"</p>
+                            <p class="testimonial-author">Jacob M.</p>
+                            <div class="rating-stars">★★★★☆</div>
+                        </div>
+                        <div class="carousel-item">
+                            <p class="testimonial-text">"We are overall very satisfied with American Home Shield. They are prompt and work with decent contractors. We had tons of issues with our previous home warranty company. It was an absolute nightmare and the people they sent were a joke. We are very glad we switched to American Home Shield."</p>
+                            <p class="testimonial-author">Anna P.</p>
+                            <div class="rating-stars">★★★★★</div>
+                        </div>
+                        <div class="carousel-item">
+                            <p class="testimonial-text">"Great customer service and professional technicians. They explain everything to me and provide feedback. The overall experience was wonderful. I highly recommend AHS."</p>
+                            <p class="testimonial-author">Dana C.</p>
+                            <div class="rating-stars">★★★★★</div>
+                        </div>
+                        <div class="carousel-item">
+                            <p class="testimonial-text">"Although the process took a long time from start to finish, I was very happy overall. Adam, my plumbing technician was awesome and very helpful and informative in answering all my questions."</p>
+                            <p class="testimonial-author">Augustin L.</p>
+                            <div class="rating-stars">★★★★☆</div>
+                        </div>
+                    </div>
+                    <button class="carousel-button prev" onclick="moveCarousel(-1)">❮</button>
+                    <button class="carousel-button next" onclick="moveCarousel(1)">❯</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- We Sweat the Small Stuff Section -->
+        <div class="assurances-section">
+            <h2>We Sweat the Small Stuff for You</h2>
+            <p>Rest easy. With our Shield Assurances, we take care of things other home warranty companies might not, like:</p>
+            <div class="assurances-content">
+                <img src="https://www.ahs.com/siteassets/web-experiments/mecv3_man-fixing-washing-machine.jpg" alt="Man fixing washing machine" class="assurances-image">
+                <div class="assurances-text">
+                    <ul>
+                        <li>Normal wear-and-tear, no matter the age of a covered item</li>
+                        <li>Unknown, pre-existing breakdowns</li>
+                        <li>Items without maintenance records</li>
+                        <li>Duplicates of the same item, like that extra AC unit</li>
+                        <li>Removal of defective equipment</li>
+                        <li>Refrigerant recapture, reclaim and disposal</li>
+                        <li>Breakdowns caused by improper installations or repairs, insufficient maintenance; rust, corrosion and sediment; and mismatched HVAC systems</li>
+                    </ul>
+                    <div class="guarantee-badge">
+                        <h4>30-Day Workmanship Guarantee</h4>
+                        <p>If you have an issue with your completed repair within 30 days of service, we’ll send a Pro back out for free.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://www.askhomequote.com/c/2fb2170b2ddd2?subsource=2005" class="cta-button" id="unlockCta">
+            <span>GET FREE ESTIMATE</span>
+        </a>
+        </div>
     </div>
+
     <div class="container">
         <div class="trust-section">
             <h3 class="trust-title">Trusted By Homeowners Nationwide</h3>
@@ -410,6 +1039,7 @@
             </div>
         </div>
     </div>
+
     <!-- Floating CTA -->
     <div class="floating-cta">
         <a href="https://www.askhomequote.com/c/2fb2170b2ddd2?subsource=2005" class="cta-button" id="unlockCta">
@@ -438,6 +1068,26 @@
                     console.log('CTA clicked - tracking event and conversion');
                 }
             });
+
+            // Testimonials Carousel Logic
+            let currentIndex = 0;
+            const carousel = document.getElementById('testimonialsCarousel');
+            const items = carousel.children.length;
+
+            window.moveCarousel = function(direction) {
+                currentIndex += direction;
+                if (currentIndex < 0) {
+                    currentIndex = items - 1;
+                } else if (currentIndex >= items) {
+                    currentIndex = 0;
+                }
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            };
+
+            // Auto-scroll every 5 seconds
+            setInterval(() => {
+                moveCarousel(1);
+            }, 5000);
         });
     </script>
 </body>
