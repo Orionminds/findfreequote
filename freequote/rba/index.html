@@ -600,20 +600,25 @@
             margin-top: 15px;
         }
 
-        .small-button {
-            background: var(--primary);
-            color: white;
-            font-size: 0.85rem;
-            font-weight: 500;
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
+       .small-button {
+    background: var(--primary);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease; /* Added transform to transition */
+}
 
-        .small-button:hover {
-            background: #004683;
-        }
+.small-button:hover {
+    background: #004683;
+    transform: scale(1.1); /* Zoom in effect (10% larger) */
+}
+
+.small-button:active {
+    transform: scale(0.95); /* Zoom out slightly when clicked */
+}
 
         /* Trust Section */
         .trust-section {
