@@ -600,7 +600,7 @@
             margin-top: 15px;
         }
 
-       .small-button {
+   .small-button {
     background: var(--primary);
     color: white;
     font-size: 0.85rem;
@@ -608,16 +608,25 @@
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background 0.3s ease, transform 0.3s ease; /* Added transform to transition */
+    transition: background 0.3s ease; /* Keep background transition for hover */
+    animation: pulse 1.5s ease-in-out infinite; /* Add continuous pulse animation */
 }
 
 .small-button:hover {
-    background: #004683;
-    transform: scale(1.1); /* Zoom in effect (10% larger) */
+    background: #004683; /* Keep hover background change */
 }
 
-.small-button:active {
-    transform: scale(0.95); /* Zoom out slightly when clicked */
+/* Keyframe animation for zoom-in and zoom-out */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.1); /* Zoom in by 10% */
+    }
+    100% {
+        transform: scale(1); /* Back to normal size */
+    }
 }
 
         /* Trust Section */
