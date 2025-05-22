@@ -4,53 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Windows & Doors Quote | Renewal by Andersen</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
     <!-- Meta Tags -->
     <meta name="description" content="Get your FREE windows and doors quote from Renewal by Andersen today! Energy-efficient replacement with lifetime warranty.">
     
-<!-- Google Ads Conversion Tracking Script -->
-<!-- Global site tag (gtag.js) - Google Ads & Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17012796761"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-17012796761');
+    <!-- Google Ads Conversion Tracking Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17012796761"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17012796761');
 
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_',
+            'event_callback': callback
+        });
+        return false;
       }
-    };
-    gtag('event', 'conversion', {
-        'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_',
-        'event_callback': callback
-    });
-    return false;
-  }
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-77JZEYT43W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-77JZEYT43W');
-</script>
-    <!-- End Google Tag Manager -->
-   <script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:6404985,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-77JZEYT43W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-77JZEYT43W');
+    </script>
+    <!-- Hotjar Tracking -->
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:6404985,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,7 +58,7 @@
     
     <style>
         :root {
-            --primary: #51b057;  /* Renewal by Andersen blue 
+            --primary: #51b057;  /* Renewal by Andersen blue */
             --accent: #8cc640;   /* Accent green */
             --dark: #1a1a1a;
             --light: #f8fafc;
@@ -150,7 +148,6 @@
             display: block;
         }
         
-        /* Rest of your existing CSS remains unchanged */
         h1 {
             font-size: clamp(1.7rem, 4vw, 2.5rem);
             font-weight: 700;
@@ -299,9 +296,8 @@
         
         .trust-logos {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 40px;
+            gap: 150px; /* Reduced gap to fit all badges in one row */
             align-items: center;
             margin: 0 auto;
             max-width: 800px;
@@ -311,8 +307,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 15px;
-            width: 150px;
+            padding: 10px; /* Reduced padding */
+            width: 100px; /* Reduced width to fit all badges */
         }
         
         .trust-icon {
@@ -348,12 +344,392 @@
             70% { box-shadow: 0 0 0 15px rgba(140,198,64,0); }
             100% { box-shadow: 0 0 0 0 rgba(140,198,64,0); }
         }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .testimonials-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 30px;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .rating-stars {
+            color: #f5c518;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+
+        .carousel-button.prev {
+            left: 10px;
+        }
+
+        .carousel-button.next {
+            right: 10px;
+        }
+
+        @media (max-width: 639px) {
+            .carousel-container {
+                max-width: 100%;
+            }
+            .carousel-button {
+                padding: 8px;
+                font-size: 1rem;
+            }
+            /* Ensure Trust Logos stay in one row on mobile */
+            .trust-logos {
+                flex-wrap: nowrap; /* Prevent wrapping to ensure single row */
+                gap: 10px; /* Further reduce gap on mobile */
+            }
+            .trust-badge-container {
+                width: 80px; /* Further reduce width on mobile */
+                padding: 5px; /* Further reduce padding on mobile */
+            }
+            .trust-icon {
+                font-size: 28px; /* Slightly smaller icons on mobile */
+            }
+            .trust-badge-text {
+                font-size: 0.75rem; /* Smaller text on mobile */
+            }
+        }
+
+        /* Trust Metrics Section (Updated for Icon on Left, Text on Right) */
+        .trust-metrics-section {
+            background: var(--light);
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .trust-metrics {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .trust-metric {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            display: flex; /* Use flex to align icon and text side by side */
+            align-items: center; /* Vertically center the content */
+            gap: 15px; /* Space between icon and text */
+        }
+
+        .trust-metric-icon {
+            font-size: 2rem; /* Increased size for better visibility */
+            color: var(--primary);
+        }
+
+        .trust-metric-content {
+            text-align: left; /* Align text to the left */
+        }
+
+        .trust-metric-value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .trust-metric-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .trust-metric-retailer {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 639px) {
+            .trust-metrics {
+                flex-direction: column;
+                align-items: center;
+            }
+            .trust-metric {
+                max-width: 100%;
+                flex-direction: row; /* Keep icon and text side by side on mobile */
+                justify-content: flex-start; /* Align content to the left */
+            }
+        }
+
+        /* Hassle-Free Process Section (from image) */
+        .process-section {
+            background: var(--light);
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .process-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .process-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+            text-align: center;
+        }
+
+        .process-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 2rem;
+            box-shadow: 0 4px 8px rgba(0,87,160,0.2);
+        }
+
+        .process-step-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .process-step-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        @media (max-width: 639px) {
+            .process-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .process-step {
+                max-width: 100%;
+            }
+        }
+
+        /* Replacement Products Section */
+        .products-section {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: left;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .product-image-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .product-overlay h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .product-overlay span {
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .product-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .product-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .product-button:hover {
+            color: #004683;
+        }
+
+        .product-button .material-icons {
+            font-size: 1.2rem;
+        }
+
+        /* Small Buttons Below */
+        .product-small-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .small-button {
+            background: var(--primary);
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .small-button:hover {
+            background: #004683;
+        }
+
+        @media (max-width: 639px) {
+            .products-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-card {
+                max-width: 100%;
+            }
+            .product-overlay h3 {
+                font-size: 1.2rem;
+            }
+            .product-overlay span {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKDQ3DP5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKDQ3DP5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
     <!-- Limited Time Offer Banner -->
@@ -364,7 +740,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
         <!-- Header -->
         <header class="header">
-         
             <div class="logo-container">
                 <img style="background-color:white; width: 200px; border-radius: 15px;" src="../../assets/images/logo.png" 
                      alt="Renewal by Andersen Logo" 
@@ -380,7 +755,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  alt="Beautiful windows and doors installed by Renewal by Andersen" 
                  class="hero-image">
         </div>
-        
+          <div class="container">
+        <div class="products-section">
+            <div class="products-grid">
+                <!-- Replacement Windows Card -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://assets.renewalbyandersen.com/-/media/Images/Products/Windows/Double-Hung-Windows/why-choose-double-hung_764x430.jpg?h=1081&iar=0&w=1920&hash=357D6FE005A5D3DE6EC413ED318F982E" 
+                             alt="Replacement Windows by Renewal by Andersen" 
+                             class="product-image">
+                        
+                    </div>
+                    <div class="product-content">
+                        <h4 class="product-title">Replacement Windows</h4>
+                        <p class="product-description">
+                            Durable. Beautiful. Custom crafted, made to order, and professionally installed. Acclaim™ replacement windows, available exclusively from Renewal by Andersen, offer the elegance, strength, and stability of wood, with the low-maintenance features of vinyl.
+                        </p>
+                        <!-- Small Buttons Below -->
+                        <div class="product-small-buttons">
+                               <a href="https://www.askhomequote.com/c/da2955792faaf?subsource=2005" 
+           data-track="quote-button" 
+           id="unlockCta" 
+           onclick="return gtag_report_conversion('https://www.askhomequote.com/c/da2955792faaf?subsource=2005')" class="small-button">Get Estimate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Replacement Patio Doors Card -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://assets.renewalbyandersen.com/-/media/Images/Page-Content/Top-Categories/Top-Categories_Patio-Doors2.png?h=910&iar=0&w=1876&hash=39016AAC7BA3029BE398FA0621C47A56" 
+                             alt="Replacement Patio Doors by Renewal by Andersen" 
+                             class="product-image">
+                    </div>
+                    <div class="product-content">
+                        <h4 class="product-title">Replacement Patio Doors</h4>
+                        <p class="product-description">
+                            Bring the outdoors in with Andersen® patio doors from Renewal by Andersen. These beautiful exterior doors come in contemporary and traditional profiles, and are available in several styles, including traditional French doors and sliding patio doors, and offer a wide range of customizations.
+                        </p>
+                       <div class="product-small-buttons">
+                               <a href="https://www.askhomequote.com/c/da2955792faaf?subsource=2005" 
+           data-track="quote-button" 
+           id="unlockCta" 
+           onclick="return gtag_report_conversion('https://www.askhomequote.com/c/da2955792faaf?subsource=2005')" class="small-button">Get Estimate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
         <!-- Benefits Grid -->
         <div class="benefit-grid">
             <div class="benefit-card">
@@ -420,8 +843,99 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </div>
+
+    <!-- Replacement Products Section -->
+  
+    <!-- Testimonials Section -->
+    <div class="container">
+        <div class="testimonials-section">
+            <h3 class="testimonials-title">What Our Customers Say</h3>
+            <div class="carousel-container">
+                <div class="carousel" id="testimonialsCarousel">
+
+                    <div class="carousel-item">
+                        <p class="testimonial-text">"Several neighbors asked me who did my windows... I would have been very happy to advertise with signs in my front yard. I'm told we (meaning Andersen as I'm an employee) used to do that on big jobs but we don't do it any more. Seems like a missed opportunity. The good news is I'm told neighborhood canvasing will happen soon..."</p>
+                        <p class="testimonial-author">Sean K <span style="font-size:11px;"> from St Paul </span></p>
+                        <div class="rating-stars">★★★★★</div>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="testimonial-text">"The Anderson Windows look great. The entire Anderson team was very professional."</p>
+                        <p class="testimonial-author">Doug W <span style="font-size:11px;">from St Paul </span></p>
+                        <div class="rating-stars">★★★★★</div>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="testimonial-text">"The workers that installed my windows were very professional and did their job very quick. The windows are an amazing quality and they seem way bigger than my old windows. Thanks now I have an amazing view of my back yard"</p>
+                        <p class="testimonial-author">Judith G <span style="font-size:11px;">from COTTAGE GROVE, MN </span></p>
+                        <div class="rating-stars">★★★★☆</div>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="testimonial-text">"This was the 1st time I've ever had windows replaced and your team met and exceeded all my expectations."</p>
+                        <p class="testimonial-author">Greg E <span style="font-size:11px;">from EDEN PRAIRIE, MN </span></p>
+                        <div class="rating-stars">★★★★★</div>
+                    </div>
+                </div>
+                <button class="carousel-button prev" onclick="moveCarousel(-1)">❮</button>
+                <button class="carousel-button next" onclick="moveCarousel(1)">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust Metrics Section (Updated for Icon on Left, Text on Right) -->
+    <div class="trust-metrics-section">
+        <div class="trust-metrics">
+            <div class="trust-metric">
+                <span class="material-icons trust-metric-icon">home</span>
+                <div class="trust-metric-content">
+                    <div class="trust-metric-value">3,035,116</div>
+                    <div class="trust-metric-text">Projects have been completed in your area</div>
+                </div>
+            </div>
+            <div class="trust-metric">
+                <span class="material-icons trust-metric-icon">star</span>
+                <div class="trust-metric-content">
+                    <div class="trust-metric-value">4.7</div>
+                    <div class="trust-metric-text">Average customer review out of 694,397 reviews in your area</div>
+                </div>
+            </div>
+            <div class="trust-metric">
+                <span class="material-icons trust-metric-icon">store</span>
+                <div class="trust-metric-content">
+                    <div class="trust-metric-retailer">CURRENT RETAILER RENEWAL BY ANDERSEN</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hassle-Free Process Section (from image) -->
+    <div class="container">
+        <div class="process-section">
+            <h3 class="process-title">Our Hassle-Free Process</h3>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-icon"><span class="material-icons">handshake</span></div>
+                    <h4 class="process-step-title">Step 1: Design Consultation</h4>
+                    <p class="process-step-text">Our design consultants provide in-home meetings to listen to your design needs and provide a plan to improve your home.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon"><span class="material-icons">build</span></div>
+                    <h4 class="process-step-title">Step 2: Measure & Manufacture</h4>
+                    <p class="process-step-text">Project Technicians ensure accuracy and answer any last minute questions before sending in the order for your fully customized windows.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon"><span class="material-icons">construction</span></div>
+                    <h4 class="process-step-title">Step 3: Installation</h4>
+                    <p class="process-step-text">Our Installers treat your home as if it were their own and clean up afterwards.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon"><span class="material-icons">support_agent</span></div>
+                    <h4 class="process-step-title">Step 4: Customer Care</h4>
+                    <p class="process-step-text">A robust limited warranty is backed by a commitment to making sure your windows function as expected.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     
-    <!-- Trust Section -->
+    <!-- Trust Section (Updated for Single Row on Mobile) -->
     <div class="container">
         <div class="trust-section">
             <h3 class="trust-title">Trusted By Homeowners Nationwide</h3>
@@ -447,36 +961,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     
     <!-- Floating CTA -->
-   <!-- Floating CTA -->
-<div class="floating-cta">
-    <a href="https://www.askhomequote.com/c/da2955792faaf?subsource=2005" 
-       data-track="quote-button" 
-       class="cta-button" 
-       id="unlockCta" 
-       onclick="return gtag_report_conversion('https://www.askhomequote.com/c/da2955792faaf?subsource=2005')">
-        <span class="material-icons unlock-icon">lock_open</span>
-        <span>GET FREE QUOTE</span>
-    </a>
-    <p class="disclaimer">By clicking, you agree to our <a href="https://www.renewalbyandersen.com/privacy-policy" style="color: var(--primary);">Privacy Policy</a>. Offer expires 31/05/2025.</p>
-</div>
+    <div class="floating-cta">
+        <a href="https://www.askhomequote.com/c/da2955792faaf?subsource=2005" 
+           data-track="quote-button" 
+           class="cta-button" 
+           id="unlockCta" 
+           onclick="return gtag_report_conversion('https://www.askhomequote.com/c/da2955792faaf?subsource=2005')">
+            <span class="material-icons unlock-icon">lock_open</span>
+            <span>GET FREE QUOTE</span>
+        </a>
+        <p class="disclaimer">By clicking, you agree to our <a href="https://www.renewalbyandersen.com/privacy-policy" style="color: var(--primary);">Privacy Policy</a>. Offer expires 31/05/2025.</p>
+    </div>
 
-<!-- Google Ads Conversion Tracking Script -->
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const cta = document.getElementById('unlockCta');
-  if (cta) {
-    cta.addEventListener('click', function () {
-      gtag('event', 'get_quote_click', {
-        event_category: 'engagement',
-        event_label: 'Unlock CTA Click',
-        value: 1
-      });
+    <!-- Google Ads Conversion Tracking Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const cta = document.getElementById('unlockCta');
+      if (cta) {
+        cta.addEventListener('click', function () {
+          gtag('event', 'get_quote_click', {
+            event_category: 'engagement',
+            event_label: 'Unlock CTA Click',
+            value: 1
+          });
+        });
+      }
     });
-  }
-});
-</script>
-
+    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -485,8 +996,30 @@ document.addEventListener('DOMContentLoaded', function () {
             setInterval(() => {
                 cta.style.animation = 'unlockPulse 1.5s';
                 setTimeout(() => cta.style.animation = '', 1500);
-            }, 5000););
+            }, 5000);
         });
+    </script>
+
+    <!-- Carousel Script -->
+    <script>
+        let currentIndex = 0;
+        const carousel = document.getElementById('testimonialsCarousel');
+        const items = carousel.children.length;
+
+        function moveCarousel(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = items - 1;
+            } else if (currentIndex >= items) {
+                currentIndex = 0;
+            }
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // Auto-scroll every 5 seconds
+        setInterval(() => {
+            moveCarousel(1);
+        }, 5000);
     </script>
 </body>
 </html>
