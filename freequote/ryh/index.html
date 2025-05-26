@@ -13,6 +13,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17012796761"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17012796761');
+
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-77JZEYT43W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-77JZEYT43W');
+    </script>
+    <!-- Hotjar Tracking -->
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:6404985,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
     
     <style>
         :root {
@@ -799,7 +838,12 @@
                     </div>
                 </div>
 
-<a href="https://www.askhomequote.com/c/c7a0c8eb6494b?subsource=2805_1" class="cta-button" id="unlockCta">
+<a 
+ href="https://www.askhomequote.com/c/c7a0c8eb6494b?subsource=2805_1" 
+           data-track="quote-button" 
+           class="cta-button" 
+           id="unlockCta" 
+           onclick="return gtag_report_conversion('https://www.askhomequote.com/c/c7a0c8eb6494b?subsource=2805_1')">
             <span class="material-icons unlock-icon">lock_open</span>
             <span>GET FREE ESTIMATE</span>
         </a>
@@ -895,9 +939,13 @@
                         <div class="savings-amount">Save $10,000+</div>
                         <div>Average savings compared to traditional roofers</div>
                     </div>
-                    <a href="https://www.askhomequote.com/c/c7a0c8eb6494b?subsource=2805_2" class="cta-button" id="unlockCta">
+                    <a  href="https://www.askhomequote.com/c/c7a0c8eb6494b?subsource=2805_2" 
+           data-track="quote-button" 
+           class="cta-button" 
+           id="unlockCta" 
+           onclick="return gtag_report_conversion('https://www.askhomequote.com/c/c7a0c8eb6494b?subsource=2805_2')">
             <span class="material-icons unlock-icon">lock_open</span>
-            <span>Get Your Free Roofing Quote</span>
+            <span>SAVE YOUR 70% OFF</span>
         </a>
                    
                 </div>
@@ -957,16 +1005,32 @@
             </div>
         </div>
     </div>
-    
-    <!-- Floating CTA -->
-    <div class="floating-cta">
-        <a href="https://www.askhomequote.com/c/c7a0c8eb6494b?subsource=2805" class="cta-button" id="unlockCta">
+       <div class="floating-cta">
+        <a href="https://www.askhomequote.com/c/c7a0c8eb6494b?subsource=2805" 
+           data-track="quote-button" 
+           class="cta-button" 
+           id="unlockCta" 
+           onclick="return gtag_report_conversion('https://www.askhomequote.com/c/c7a0c8eb6494b?subsource=2805')">
             <span class="material-icons unlock-icon">lock_open</span>
             <span>GET FREE ROOFING QUOTE</span>
         </a>
-        <p class="disclaimer">By clicking, you agree to our <a href="https://remodelyourhome.com/privacy-policy" style="color: var(--primary);">Privacy Policy</a>. Limited Time Offer</p>
+       <p class="disclaimer">By clicking, you agree to our <a href="https://remodelyourhome.com/privacy-policy" style="color: var(--primary);">Privacy Policy</a>. Limited Time Offer</p>
     </div>
-
+  
+ <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const cta = document.getElementById('unlockCta');
+      if (cta) {
+        cta.addEventListener('click', function () {
+          gtag('event', 'get_quote_click', {
+            event_category: 'engagement',
+            event_label: 'Unlock CTA Click',
+            value: 1
+          });
+        });
+      }
+    });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const cta = document.getElementById('unlockCta');
@@ -976,17 +1040,7 @@
                 cta.style.animation = 'unlockPulse 1.5s';
                 setTimeout(() => cta.style.animation = '', 1500);
             }, 5000);
-            
-            // Track main CTA click
-            cta.addEventListener('click', function() {
-                if(typeof gtag !== 'undefined') {
-                    gtag('event', 'click', {
-                        'event_category': 'CTA',
-                        'event_label': 'Roofing_Replacement_Quote'
-                    });
-                    console.log('Main CTA clicked - tracking event');
-                }
-            });
+           );
             
             // Track user engagement
             let scrollDepth = 0;
