@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top-Rated Roofing Contractors Near You | Free Quote | Remodel Your Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+           font-family: "Roboto", sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon fill="rgba(255,255,255,0.1)" points="0,0 100,0 100,85 0,100"/></svg>');
+            background-size: cover;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #1075bc;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            color: #1075bc;
+            
+        }
+        
+        .offer-banner {
+            background: #1075bc;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+          
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        .offer-text {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .offer-details {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+           background: #8cc63f;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    font-weight: regular;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+        }
+        
+
+
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Recent Work Section */
+        .recent-work {
+            padding: 40px 0;
+            background: #f8fafc;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1075bc;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #6b7280;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .slider-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        
+        .slider-nav button {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: background 0.3s ease;
+        }
+        
+        .slider-nav button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background: #f8fafc;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-color: #3b82f6;
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3b82f6 0%, #1075bc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            color: #1075bc;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .benefit-card p {
+            color: #6b7280;
+            font-size: 1.1rem;
+        }
+        
+        /* Process Section */
+        .process {
+            background: #f8fafc;
+            padding: 80px 0;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .process-step {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ef4444;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .process-step h3 {
+            color: #1075bc;
+            font-size: 1.3rem;
+            margin: 20px 0 15px;
+            font-weight: bold;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #3b82f6;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #374151;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #1075bc;
+        }
+        
+        .stars {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #1075bc 0%, #3b82f6 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+                .cta-button {
+           background: #8cc63f;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    font-weight: regular;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+        }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .offer-text {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .slide img {
+                height: 300px;
+            }
+            .final-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Top-Rated Roofing Contractors Near You</h1>
+                <p class="hero-subtitle">Get Expert Roof Installation & Replacement with 20+ Years of Experience</p>
+                
+                <div class="offer-banner">
+                    <div class="offer-text">GET YOUR FREE CONSULTATION TODAY!</div>
+                    <div class="offer-details">UP TO 75% OFF INSTALLATION* + 18 Months No Interest, No Payments</div>
+                </div>
+                <a href="/quote.html" class="cta-button">Get My Free Quote Now!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Work Section -->
+    <section class="recent-work">
+        <div class="container">
+            <h2 class="section-title">Our Recent Work</h2>
+            <p class="section-subtitle">Explore some of our recently completed roofing projects</p>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="../../assets/images/ryh-roof-800x600-gallery-1.webp" alt="Roof Project 1">
+                        <div class="slide-caption">Modern Asphalt Shingle Roof - Seattle, WA</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../../assets/images/ryh-roof-800x600-gallery-2.webp" alt="Roof Project 2">
+                        <div class="slide-caption">Cedar Shake Installation - Portland, OR</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../../assets/images/ryh-roof-800x600-gallery-3.webp" alt="Roof Project 3">
+                        <div class="slide-caption">Metal Roof Replacement - Denver, CO</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../../assets/images/ryh-roof-800x600-gallery-4.webp" alt="Roof Project 4">
+                        <div class="slide-caption">Tile Roof Renovation - Miami, FL</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../../assets/images/ryh-roof-800x600-gallery-5.webp" alt="Roof Project 5">
+                        <div class="slide-caption">Slate Roof Restoration - Boston, MA</div>
+                    </div>
+                    <div class="slide">
+                        <img src="../../assets/images/ryh-roof-800x600-gallery-6.webp" alt="Roof Project 6">
+                        <div class="slide-caption">Flat Roof Installation - Chicago, IL</div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button class="prev">←</button>
+                    <button class="next">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Remodel Your Home?</h2>
+            <p class="section-subtitle">With 20+ years of experience, we connect you with the best roofing contractors in your area</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Top-Rated Contractors</h3>
+                    <p>Our network includes only vetted and highly-rated professionals known for quality work and reliability.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Fast & Easy Process</h3>
+                    <p>Get a free quote in minutes with no hassle, no obligation. Many projects completed in just one day!</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Peace of Mind</h3>
+                    <p>Expert contractors ready to discuss your options and provide accurate estimates with reliable service.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📍</div>
+                    <h3>Local Experts</h3>
+                    <p>We connect you with contractors based in your area who are familiar with local regulations and weather conditions.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Best Deals Available</h3>
+                    <p>Compare quotes from multiple contractors to find the best deals and payment options in your area.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔧</div>
+                    <h3>Complete Solutions</h3>
+                    <p>End-to-end roofing solutions from expert advice and material selection to installation and cleanup.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Simple 3-step process to get your roof project started</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Tell Us Your Needs</h3>
+                    <p>Share your roofing project details, preferences, and vision through our simple questionnaire.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Get Matched with Experts</h3>
+                    <p>We connect you with up to 4 top-rated roofing contractors in your area for free quotes and consultations.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Start Your Project</h3>
+                    <p>Compare quotes, choose your contractor, and begin your roofing installation with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Join thousands of satisfied homeowners who trust Remodel Your Home</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Amazing experience! They connected me with a fantastic contractor who completed my roof replacement in one day. The quality is outstanding and the price was very competitive."</p>
+                    <div class="testimonial-author">- Sarah M., Atlanta, GA</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Professional service from start to finish. The contractor they matched me with was knowledgeable, punctual, and cleaned up everything perfectly. Highly recommend!"</p>
+                    <div class="testimonial-author">- Mike R., Phoenix, AZ</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Best decision I made for my home! The new roof looks incredible and I saved money by comparing multiple quotes. The whole process was stress-free."</p>
+                    <div class="testimonial-author">- Lisa K., Miami, FL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Transform Your Roof?</h2>
+            <p>Don't wait - get your free consultation today and start saving on your roofing project!</p>
+            <a href="/quote.html" class="cta-button">Start My Free Quote</a>
+        </div>
+    </section>
+
+    <script>
+        // Slider functionality
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.slider-nav .prev');
+        const nextButton = document.querySelector('.slider-nav .next');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else {
+                currentIndex = index;
+            }
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            showSlide(currentIndex - 1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            showSlide(currentIndex + 1);
+        });
+
+        // Auto-slide every 5 seconds
+        let autoSlide = setInterval(() => {
+            showSlide(currentIndex + 1);
+        }, 5000);
+
+        // Pause auto-slide on hover
+        sliderContainer = document.querySelector('.slider-container');
+        sliderContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoSlide);
+        });
+
+        sliderContainer.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(() => {
+                showSlide(currentIndex + 1);
+            }, 5000);
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.benefit-card, .process-step, .testimonial, .slider-container').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
