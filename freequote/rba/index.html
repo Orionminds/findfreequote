@@ -56,7 +56,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <style>
         :root {
             --primary: #51b057;  /* Renewal by Andersen blue */
@@ -834,6 +835,7 @@
            .gallery-section {
             padding: 60px 0;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 20px;
         }
         
         .gallery-heading {
@@ -1038,19 +1040,11 @@
             position: relative;
         }
 
-        .carousel-wrapper {
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .reviewCarousel {
+        .owl-carousel .owl-stage {
             display: flex;
-            transition: transform 0.3s ease;
-            gap: 20px;
         }
 
         .review-card {
-            min-width: calc(33.333% - 14px);
             background-color: #ffffff;
             border-radius: 18px;
             padding: 20px;
@@ -1061,6 +1055,7 @@
             text-align: left;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             border: 1px solid #e8eaed;
+            box-sizing: border-box;
         }
 
         .review-header {
@@ -1132,7 +1127,8 @@
             font-family: Roboto, sans-serif;
         }
 
-        .nav-button {
+        .owl-nav .owl-prev,
+        .owl-nav .owl-next {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -1151,34 +1147,33 @@
             transition: background-color 0.3s ease;
         }
 
-        .nav-button:hover {
+        .owl-nav .owl-prev:hover,
+        .owl-nav .owl-next:hover {
             background-color: #555;
         }
 
-        .nav-button.prev {
+        .owl-nav .owl-prev {
             left: -20px;
         }
 
-        .nav-button.next {
+        .owl-nav .owl-next {
             right: -20px;
         }
 
-        @media (max-width: 768px) {
-            .review-card {
-                min-width: 100%;
-            }
-     .margin-review{
-            margin:40px 0px;
-        }
+        .margin-review {
+            margin: 80px 0px 30px;
         }
 
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .review-card {
-                min-width: calc(50% - 10px);
+        @media (max-width: 768px) {
+            .margin-review {
+                margin: 40px 0px;
             }
-        }
-        .margin-review{
-            margin:80px 0px 30px;
+            .owl-nav .owl-prev {
+                left: -10px;
+            }
+            .owl-nav .owl-next {
+                right: -10px;
+            }
         }
   /* Popup Overlay */
         .popup-overlay {
@@ -1506,102 +1501,98 @@
 
     <div class="container margin-review" >
               <h3 class="benefits-header" style="padding:20px 0px;">What Our Customers are Saying</h3>
-   <div class="reviews-container">
-        <button class="nav-button prev" onclick="slideReviews(-1)">‹</button>
-        <div class="carousel-wrapper">
-            <div class="reviewCarousel" id="reviewCarousel">
-                <!-- Review 1 -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="avatar">MJ</div>
-                        <div class="user-info">
-                            <div class="user-name">Michael Johnson</div>
-                            <div class="stars">★★★★★</div>
-                        </div>
+    <div class="reviews-container margin-review">
+        <div class="owl-carousel owl-theme" id="reviewCarousel">
+            <!-- Review 1 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="avatar">MJ</div>
+                    <div class="user-info">
+                        <div class="user-name">Michael Johnson</div>
+                        <div class="stars">★★★★★</div>
                     </div>
-                    <div class="review-content">
-                        Excellent window replacement service! The team was professional and efficient. They replaced all 8 windows in our home within two days. The new windows look amazing and have already made a noticeable difference in our energy bills. The installation was clean and they cleaned up everything afterwards. Highly recommend their services for anyone looking for quality window replacement. The pricing was very competitive compared to other companies we got quotes from.
-                    </div>
-                    <div class="location">California, USA</div>
                 </div>
+                <div class="review-content">
+                    Excellent window replacement service! The team was professional and efficient. They replaced all 8 windows in our home within two days. The new windows look amazing and have already made a noticeable difference in our energy bills. The installation was clean and they cleaned up everything afterwards. Highly recommend their services for anyone looking for quality window replacement. The pricing was very competitive compared to other companies we got quotes from.
+                </div>
+                <div class="location">California, USA</div>
+            </div>
 
-                <!-- Review 2 -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="avatar">SB</div>
-                        <div class="user-info">
-                            <div class="user-name">Sarah Brown</div>
-                            <div class="stars">★★★★★</div>
-                        </div>
+            <!-- Review 2 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="avatar">SB</div>
+                    <div class="user-info">
+                        <div class="user-name">Sarah Brown</div>
+                        <div class="stars">★★★★★</div>
                     </div>
-                    <div class="review-content">
-                        Outstanding window replacement experience! From the initial consultation to the final installation, everything was smooth. The quality of windows is top-notch and the installers were very skilled. They took great care to protect our furniture and floors during the installation process. Our home feels more comfortable now with better insulation. The whole process was completed ahead of schedule. Would definitely use their services again for future home improvements.
-                    </div>
-                    <div class="location">Texas, USA</div>
                 </div>
+                <div class="review-content">
+                    Outstanding window replacement experience! From the initial consultation to the final installation, everything was smooth. The quality of windows is top-notch and the installers were very skilled. They took great care to protect our furniture and floors during the installation process. Our home feels more comfortable now with better insulation. The whole process was completed ahead of schedule. Would definitely use their services again for future home improvements.
+                </div>
+                <div class="location">Texas, USA</div>
+            </div>
 
-                <!-- Review 3 -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="avatar">DW</div>
-                        <div class="user-info">
-                            <div class="user-name">David Wilson</div>
-                            <div class="stars">★★★★★</div>
-                        </div>
+            <!-- Review 3 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="avatar">DW</div>
+                    <div class="user-info">
+                        <div class="user-name">David Wilson</div>
+                        <div class="stars">★★★★★</div>
                     </div>
-                    <div class="review-content">
-                        Professional window replacement service with excellent results. The team arrived on time and worked efficiently throughout the day. The new windows have completely transformed the look of our house. We've noticed significant improvement in noise reduction and temperature control. The installation was precise and all old materials were properly disposed of. Customer service was exceptional from start to finish. Great value for money!
-                    </div>
-                    <div class="location">Florida, USA</div>
                 </div>
+                <div class="review-content">
+                    Professional window replacement service with excellent results. The team arrived on time and worked efficiently throughout the day. The new windows have completely transformed the look of our house. We've noticed significant improvement in noise reduction and temperature control. The installation was precise and all old materials were properly disposed of. Customer service was exceptional from start to finish. Great value for money!
+                </div>
+                <div class="location">Florida, USA</div>
+            </div>
 
-                <!-- Review 4 -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="avatar">EM</div>
-                        <div class="user-info">
-                            <div class="user-name">Emily Martinez</div>
-                            <div class="stars">★★★★★</div>
-                        </div>
+            <!-- Review 4 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="avatar">EM</div>
+                    <div class="user-info">
+                        <div class="user-name">Emily Martinez</div>
+                        <div class="stars">★★★★★</div>
                     </div>
-                    <div class="review-content">
-                        Amazing window replacement job! The crew was courteous and respectful of our home. They explained each step of the process and answered all our questions patiently. The quality of workmanship is impressive and the new windows operate smoothly. We're especially happy with how they handled the custom sizes we needed. The cleanup was thorough and professional. Couldn't be happier with the results and would recommend to anyone.
-                    </div>
-                    <div class="location">New York, USA</div>
                 </div>
+                <div class="review-content">
+                    Amazing window replacement job! The crew was courteous and respectful of our home. They explained each step of the process and answered all our questions patiently. The quality of workmanship is impressive and the new windows operate smoothly. We're especially happy with how they handled the custom sizes we needed. The cleanup was thorough and professional. Couldn't be happier with the results and would recommend to anyone.
+                </div>
+                <div class="location">New York, USA</div>
+            </div>
 
-                <!-- Review 5 -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="avatar">RT</div>
-                        <div class="user-info">
-                            <div class="user-name">Robert Taylor</div>
-                            <div class="stars">★★★★★</div>
-                        </div>
+            <!-- Review 5 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="avatar">RT</div>
+                    <div class="user-info">
+                        <div class="user-name">Robert Taylor</div>
+                        <div class="stars">★★★★★</div>
                     </div>
-                    <div class="review-content">
-                        Top quality window replacement service! The installation team was knowledgeable and experienced. They completed the job efficiently while maintaining high standards of quality. Our new windows look fantastic and have improved our home's curb appeal significantly. The energy efficiency improvement is noticeable in our monthly bills. The team was also very careful not to damage any landscaping around the windows. Excellent service overall!
-                    </div>
-                    <div class="location">Arizona, USA</div>
                 </div>
+                <div class="review-content">
+                    Top quality window replacement service! The installation team was knowledgeable and experienced. They completed the job efficiently while maintaining high standards of quality. Our new windows look fantastic and have improved our home's curb appeal significantly. The energy efficiency improvement is noticeable in our monthly bills. The team was also very careful not to damage any landscaping around the windows. Excellent service overall!
+                </div>
+                <div class="location">Arizona, USA</div>
+            </div>
 
-                <!-- Review 6 -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="avatar">LG</div>
-                        <div class="user-info">
-                            <div class="user-name">Lisa Garcia</div>
-                            <div class="stars">★★★★★</div>
-                        </div>
+            <!-- Review 6 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="avatar">LG</div>
+                    <div class="user-info">
+                        <div class="user-name">Lisa Garcia</div>
+                        <div class="stars">★★★★★</div>
                     </div>
-                    <div class="review-content">
-                        Fantastic window replacement experience from beginning to end! The sales representative was honest and provided a fair quote. The installation team was punctual and worked with great attention to detail. Our home feels like new with these beautiful windows. The improvement in natural light and ventilation is remarkable. They also provided helpful maintenance tips for long-term care. Professional service that exceeded our expectations in every way!
-                    </div>
-                    <div class="location">Michigan, USA</div>
                 </div>
+                <div class="review-content">
+                    Fantastic window replacement experience from beginning to end! The sales representative was honest and provided a fair quote. The installation team was punctual and worked with great attention to detail. Our home feels like new with these beautiful windows. The improvement in natural light and ventilation is remarkable. They also provided helpful maintenance tips for long-term care. Professional service that exceeded our expectations in every way!
+                </div>
+                <div class="location">Michigan, USA</div>
             </div>
         </div>
-        <button class="nav-button next" onclick="slideReviews(1)">›</button>
     </div>
     </div>
     <!-- Trust Metrics Section -->
@@ -1696,6 +1687,31 @@
         </a>
       </div>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#reviewCarousel").owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    769: {
+                        items: 2
+                    },
+                    1025: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
     <!-- Google Ads Conversion Tracking Script -->
  <div class="popup-overlay" id="popupOverlay">
         <div class="popup-content">
@@ -1733,7 +1749,7 @@
             // Show popup and blur background
             overlay.classList.add('show');
             mainContent.classList.add('blurred');
-        }, 7000);
+        }, 15000);
 
         // Close popup functionality
         function closePopup() {
@@ -1767,36 +1783,7 @@
             }
         });
     </script>
- <script>
-        let currentSlide = 0;
-        const totalCards = 6;
-        const cardsPerView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
-        const maxSlides = Math.max(0, totalCards - cardsPerView);
-
-        function slideReviews(direction) {
-            const carousel = document.getElementById('reviewCarousel');
-            
-            currentSlide += direction;
-            
-            if (currentSlide < 0) {
-                currentSlide = maxSlides;
-            } else if (currentSlide > maxSlides) {
-                currentSlide = 0;
-            }
-            
-            const slideWidth = 100 / cardsPerView;
-            const translateX = -(currentSlide * slideWidth);
-            carousel.style.transform = `translateX(${translateX}%)`;
-        }
-
-    
-
-        // Auto-slide functionality (optional)
-        setInterval(function() {
-            slideReviews(1);
-        }, 5000);
-
-    </script>
+ 
     <script>
     document.addEventListener('DOMContentLoaded', function () {
       const cta = document.getElementById('unlockCta');
