@@ -1180,6 +1180,136 @@
         .margin-review{
             margin:80px 0px 30px;
         }
+  /* Popup Overlay */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .popup-overlay.show {
+            display: flex;
+        }
+
+        .popup-content {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 550px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transform: scale(0.8);
+            animation: popupScale 0.5s ease-out forwards;
+            position: relative;
+        }
+
+        .popup-image {
+            width: 100%;
+            height: 200px;
+            background-image: url("../../assets/images/popup-image.jpg");
+             background-size: cover; /* Resize the background image to cover the entire container */
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            border: 3px solid #ddd;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: #ff4757;
+        }
+
+        .popup-title {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .popup-subtitle {
+            color: #e74c3c;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .claim-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(238, 90, 36, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .claim-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(238, 90, 36, 0.6);
+            background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+        }
+
+        .claim-btn:active {
+            transform: translateY(-1px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes popupScale {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .blurred {
+            filter: blur(5px);
+            transition: filter 0.5s ease;
+        }
     </style>
 </head>
 <body>
@@ -1568,6 +1698,71 @@
     </div>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- Google Ads Conversion Tracking Script -->
+ <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            
+            <div class="popup-image">
+              
+            </div>
+            
+            <div class="popup-title">
+                Get $400 Off Windows & $850 Off Doors
+            </div>
+            
+            <div class="popup-subtitle">
+                Limited Time Offer – Valid Till 30/06/2025
+            </div>
+            
+            <button class="claim-btn" id="claimBtn">
+                Claim Offer Now
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Show popup after 7 seconds
+        setTimeout(() => {
+            const overlay = document.getElementById('popupOverlay');
+            const mainContent = document.getElementById('mainContent');
+            
+            // Show popup and blur background
+            overlay.classList.add('show');
+            mainContent.classList.add('blurred');
+        }, 7000);
+
+        // Close popup functionality
+        function closePopup() {
+            const overlay = document.getElementById('popupOverlay');
+            const mainContent = document.getElementById('mainContent');
+            
+            overlay.classList.remove('show');
+            mainContent.classList.remove('blurred');
+        }
+
+        // Close button event
+        document.getElementById('closeBtn').addEventListener('click', closePopup);
+
+        // Close when clicking outside popup
+        document.getElementById('popupOverlay').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closePopup();
+            }
+        });
+
+        // Claim button action
+        document.getElementById('claimBtn').addEventListener('click', () => {
+            alert('Offer claimed! Contact us to proceed with your order.');
+            closePopup();
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closePopup();
+            }
+        });
+    </script>
  <script>
         let currentSlide = 0;
         const totalCards = 6;
