@@ -837,107 +837,99 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             border-radius: 2px;
         }
         
-        .benefit-grid {
-            display: grid;
-            gap: 25px;
-            margin: 20px 0 70px;
-        }
-        
-        @media (max-width: 639px) {
-            .benefit-grid {
-                grid-template-columns: 1fr;
-                padding: 0 15px;
-            }
-            .hero-section {
-                min-height: auto;
-                padding-bottom: 30px;
-            }
-            .image-showcase {
-                width: 92%;
-            }
-        }
-        
-        @media (min-width: 640px) and (max-width: 1023px) {
-            .benefit-grid {
-                grid-template-columns: repeat(2, 1fr);
-                padding: 0 20px;
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .benefit-grid {
-                grid-template-columns: repeat(3, 1fr);
-                padding: 0 15px;
-            }
-        }
-        
-        .benefit-card {
-            background: white;
-            padding: 30px 25px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            transition: all 0.4s ease;
-            text-align: center;
-            height: 100%;
-            border: 1px solid rgba(0,0,0,0.03);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,84,164,0.15);
-            border-color: rgba(0,84,164,0.1);
-        }
-        
-        .benefit-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: #6dc14c;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-        
-        .benefit-card:hover:before {
-            opacity: 1;
-        }
-        
-        .benefit-icon {
-            width: 70px;
-            height: 70px;
-              background: #6dc14c;
-            color: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 30px;
-            transition: all 0.3s ease;
-        }
-        
-        .benefit-card:hover .benefit-icon {
-            background: #6dc14c;
-            color: white;
-            transform: scale(1.1);
-            box-shadow: 0 5px 15px rgba(140,198,64,0.3);
-        }
-        
-        .benefit-card h3 {
-            margin-bottom: 12px;
-            font-weight: 600;
-            font-size: 1.25rem;
-            color: var(--primary-dark);
-        }
-        
-        .benefit-card p {
-            color: var(--gray);
-            font-size: 0.95rem;
-        }
+    .benefit-grid {
+    display: grid;
+    gap: 25px;
+    margin: 20px 0 70px;
+}
+
+@media (max-width: 639px) {
+    .benefit-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+    .hero-section {
+        min-height: auto;
+        padding-bottom: 30px;
+    }
+    .image-showcase {
+        width: 92%;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .benefit-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 15px;
+    }
+}
+
+.benefit-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    text-align: center;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,84,164,0.15);
+    border-color: rgba(0,84,164,0.1);
+}
+
+.benefit-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #6dc14c;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover:before {
+    opacity: 1;
+}
+
+.benefit-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-image {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.benefit-card h3 {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--primary-dark);
+}
+
+.benefit-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
     </style>
 </head>
 <body>
@@ -973,50 +965,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
         <div class="container">
      <section class="features-section">
-            <h2 class="section-title">Why Choose Renewal by Andersen</h2>
-            
-            <div class="benefit-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon"><span class="material-icons">energy_savings_leaf</span></div>
-                    <h3>Energy Savings</h3>
-                    <p>Reduce energy costs by up to 40% with our premium windows and patio doors</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon"><span class="material-icons">verified</span></div>
-                    <h3>Lifetime Warranty</h3>
-                    <p>Industry's strongest warranty for windows and doors</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon"><span class="material-icons">home</span></div>
-                    <h3>Home Value</h3>
-                    <p>Increase property value with quality installation</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon"><span class="material-icons">security</span></div>
-                    <h3>Storm Protection</h3>
-                    <p>Impact-resistant windows and doors available</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon"><span class="material-icons">palette</span></div>
-                    <h3>Custom Designs</h3>
-                    <p>Hundreds of style/color combinations for both</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon"><span class="material-icons">calendar_today</span></div>
-                    <h3>Fast Installation</h3>
-                    <p>Most window and door projects completed in 1 day</p>
-                </div>
-            </div>
-            
-            <!-- Trust Section -->
-            
-            </div>
-        </section>
+    <h2 class="section-title">Why Choose Renewal by Andersen</h2>
+    
+    <div class="benefit-grid">
+        <div class="benefit-card">
+            <img src="https://via.placeholder.com/400x200" alt="Energy Savings" class="benefit-image">
+            <h3>Energy Savings</h3>
+            <p>Reduce energy costs by up to 40% with our premium windows and patio doors</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="https://via.placeholder.com/400x200" alt="Lifetime Warranty" class="benefit-image">
+            <h3>Lifetime Warranty</h3>
+            <p>Industry's strongest warranty for windows and doors</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="https://via.placeholder.com/400x200" alt="Home Value" class="benefit-image">
+            <h3>Home Value</h3>
+            <p>Increase property value with quality installation</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="https://via.placeholder.com/400x200" alt="Storm Protection" class="benefit-image">
+            <h3>Storm Protection</h3>
+            <p>Impact-resistant windows and doors available</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="https://via.placeholder.com/400x200" alt="Custom Designs" class="benefit-image">
+            <h3>Custom Designs</h3>
+            <p>Hundreds of style/color combinations for both</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="https://via.placeholder.com/400x200" alt="Fast Installation" class="benefit-image">
+            <h3>Fast Installation</h3>
+            <p>Most window and door projects completed in 1 day</p>
+        </div>
+    </div>
+</section>
 </div>
     <!-- Floating CTA -->
     <div class="floating-cta">
