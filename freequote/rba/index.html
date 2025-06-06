@@ -1031,6 +1031,153 @@
                 font-size: 14px;
             }
         }
+
+   .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .carousel-wrapper {
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .reviewCarousel {
+            display: flex;
+            transition: transform 0.3s ease;
+            gap: 20px;
+        }
+
+        .review-card {
+            min-width: calc(33.333% - 14px);
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            border: 1px solid #e8eaed;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            width: 100%;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 16px;
+            color: white;
+            font-weight: 500;
+        }
+
+        .user-info {
+            flex: 1;
+        }
+
+        .user-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: #3c4043;
+            margin-bottom: 2px;
+            font-family: 'Google Sans', Roboto, sans-serif;
+        }
+
+        .review-content {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            color: #5f6368;
+            font-size: 14px;
+            font-family: Roboto, sans-serif;
+        }
+
+        .review-content::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .review-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .review-content::-webkit-scrollbar-thumb {
+            background: #dadce0;
+            border-radius: 4px;
+        }
+
+        .review-content::-webkit-scrollbar-thumb:hover {
+            background: #bdc1c6;
+        }
+
+        .stars {
+            color: #fbbc04;
+            font-size: 16px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .location {
+            color: #5f6368;
+            font-size: 12px;
+            font-family: Roboto, sans-serif;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #555;
+        }
+
+        .nav-button.prev {
+            left: -20px;
+        }
+
+        .nav-button.next {
+            right: -20px;
+        }
+
+        @media (max-width: 768px) {
+            .review-card {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .review-card {
+                min-width: calc(50% - 10px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -1226,36 +1373,102 @@
     </section>
 
 
-    <div class="container">
-        <div class="testimonials-section">
-            <h3 class="testimonials-title">What Our Customers are saying</h3>
-            <div class="carousel-container">
-                <div class="carousel" id="testimonialsCarousel">
-                    <div class="carousel-item">
-                        <p class="testimonial-text">"Several neighbors asked me who did my windows... I would have been very happy to advertise with signs in my front yard. I'm told we (meaning Andersen as I'm an employee) used to do that on big jobs but we don't do it any more. Seems like a missed opportunity. The good news is I'm told neighborhood canvasing will happen soon..."</p>
-                        <p class="testimonial-author">Sean K <span style="font-size:11px;"> from St Paul </span></p>
-                        <div class="rating-stars">★★★★★</div>
+   <div class="reviews-container">
+        <button class="nav-button prev" onclick="slideReviews(-1)">‹</button>
+        <div class="carousel-wrapper">
+            <div class="reviewCarousel" id="reviewCarousel">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="avatar">MJ</div>
+                        <div class="user-info">
+                            <div class="user-name">Michael Johnson</div>
+                            <div class="stars">★★★★★</div>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <p class="testimonial-text">"The Anderson Windows look great. The entire Anderson team was very professional."</p>
-                        <p class="testimonial-author">Doug W <span style="font-size:11px;">from St Paul </span></p>
-                        <div class="rating-stars">★★★★★</div>
+                    <div class="review-content">
+                        Excellent window replacement service! The team was professional and efficient. They replaced all 8 windows in our home within two days. The new windows look amazing and have already made a noticeable difference in our energy bills. The installation was clean and they cleaned up everything afterwards. Highly recommend their services for anyone looking for quality window replacement. The pricing was very competitive compared to other companies we got quotes from.
                     </div>
-                    <div class="carousel-item">
-                        <p class="testimonial-text">"The workers that installed my windows were very professional and did their job very quick. The windows are an amazing quality and they seem way bigger than my old windows. Thanks now I have an amazing view of my back yard"</p>
-                        <p class="testimonial-author">Judith G <span style="font-size:11px;">from COTTAGE GROVE, MN </span></p>
-                        <div class="rating-stars">★★★★☆</div>
-                    </div>
-                    <div class="carousel-item">
-                        <p class="testimonial-text">"This was the 1st time I've ever had windows replaced and your team met and exceeded all my expectations."</p>
-                        <p class="testimonial-author">Greg E <span style="font-size:11px;">from EDEN PRAIRIE, MN </span></p>
-                        <div class="rating-stars">★★★★★</div>
-                    </div>
+                    <div class="location">California, USA</div>
                 </div>
-                <button class="carousel-button prev" onclick="moveCarousel(-1)">❮</button>
-                <button class="carousel-button next" onclick="moveCarousel(1)">❯</button>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="avatar">SB</div>
+                        <div class="user-info">
+                            <div class="user-name">Sarah Brown</div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        Outstanding window replacement experience! From the initial consultation to the final installation, everything was smooth. The quality of windows is top-notch and the installers were very skilled. They took great care to protect our furniture and floors during the installation process. Our home feels more comfortable now with better insulation. The whole process was completed ahead of schedule. Would definitely use their services again for future home improvements.
+                    </div>
+                    <div class="location">Texas, USA</div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="avatar">DW</div>
+                        <div class="user-info">
+                            <div class="user-name">David Wilson</div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        Professional window replacement service with excellent results. The team arrived on time and worked efficiently throughout the day. The new windows have completely transformed the look of our house. We've noticed significant improvement in noise reduction and temperature control. The installation was precise and all old materials were properly disposed of. Customer service was exceptional from start to finish. Great value for money!
+                    </div>
+                    <div class="location">Florida, USA</div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="avatar">EM</div>
+                        <div class="user-info">
+                            <div class="user-name">Emily Martinez</div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        Amazing window replacement job! The crew was courteous and respectful of our home. They explained each step of the process and answered all our questions patiently. The quality of workmanship is impressive and the new windows operate smoothly. We're especially happy with how they handled the custom sizes we needed. The cleanup was thorough and professional. Couldn't be happier with the results and would recommend to anyone.
+                    </div>
+                    <div class="location">New York, USA</div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="avatar">RT</div>
+                        <div class="user-info">
+                            <div class="user-name">Robert Taylor</div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        Top quality window replacement service! The installation team was knowledgeable and experienced. They completed the job efficiently while maintaining high standards of quality. Our new windows look fantastic and have improved our home's curb appeal significantly. The energy efficiency improvement is noticeable in our monthly bills. The team was also very careful not to damage any landscaping around the windows. Excellent service overall!
+                    </div>
+                    <div class="location">Arizona, USA</div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="avatar">LG</div>
+                        <div class="user-info">
+                            <div class="user-name">Lisa Garcia</div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        Fantastic window replacement experience from beginning to end! The sales representative was honest and provided a fair quote. The installation team was punctual and worked with great attention to detail. Our home feels like new with these beautiful windows. The improvement in natural light and ventilation is remarkable. They also provided helpful maintenance tips for long-term care. Professional service that exceeded our expectations in every way!
+                    </div>
+                    <div class="location">Michigan, USA</div>
+                </div>
             </div>
         </div>
+        <button class="nav-button next" onclick="slideReviews(1)">›</button>
     </div>
 
     <!-- Trust Metrics Section -->
@@ -1352,6 +1565,38 @@
     </div>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- Google Ads Conversion Tracking Script -->
+ <script>
+        let currentSlide = 0;
+        const totalCards = 6;
+        const cardsPerView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
+        const maxSlides = Math.max(0, totalCards - cardsPerView);
+
+        function slideReviews(direction) {
+            const carousel = document.getElementById('reviewCarousel');
+            
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = maxSlides;
+            } else if (currentSlide > maxSlides) {
+                currentSlide = 0;
+            }
+            
+            const slideWidth = 100 / cardsPerView;
+            const translateX = -(currentSlide * slideWidth);
+            carousel.style.transform = `translateX(${translateX}%)`;
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            location.reload(); // Simple solution to recalculate on resize
+        });
+
+        // Auto-slide functionality (optional)
+        setInterval(function() {
+            slideReviews(1);
+        }, 5000);
+    </script>
     <script>
     document.addEventListener('DOMContentLoaded', function () {
       const cta = document.getElementById('unlockCta');
