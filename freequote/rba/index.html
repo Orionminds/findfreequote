@@ -1644,88 +1644,128 @@
             moveCarousel(1);
         }, 5000);
     </script>
-          <script>
-        let slideIndex = 1;
-        const totalSlides = 6;
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+    let slideIndex = 1;
+    const totalSlides = 6;
+    const slides = document.getElementsByClassName('slider-image');
+    const indicators = document.getElementsByClassName('indicator');
+    const prevButton = document.querySelector('.slider-nav.prev');
+    const nextButton = document.querySelector('.slider-nav.next');
+    const currentSlideDisplay = document.getElementById('currentSlide');
 
-        function changeSlide(n) {
-            showSlide(slideIndex += n);
+    // Function to show a specific slide
+    function showSlide(n) {
+        // Normalize slideIndex
+        if (n > totalSlides) {
+            slideIndex = 1;
+        } else if (n < 1) {
+            slideIndex = totalSlides;
+        } else {
+            slideIndex = n;
         }
 
-        function currentSlide(n) {
-            showSlide(slideIndex = n);
+        // Hide all slides and remove active class from indicators
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove('active');
+            indicators[i].classList.remove('active');
         }
 
-        function showSlide(n) {
-            const slides = document.getElementsByClassName('slider-image');
-            const indicators = document.getElementsByClassName('indicator');
-            
-            if (n > totalSlides) {
-                slideIndex = 1;
-            }
-            if (n < 1) {
-                slideIndex = totalSlides;
-            }
-            
-            // Hide all slides
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].classList.remove('active');
-            }
-            
-            // Remove active class from all indicators
-            for (let i = 0; i < indicators.length; i++) {
-                indicators[i].classList.remove('active');
-            }
-            
-            // Show current slide and activate indicator
-            slides[slideIndex - 1].classList.add('active');
-            indicators[slideIndex - 1].classList.add('active');
-            
-            // Update counter
-            document.getElementById('currentSlide').textContent = slideIndex;
+        // Show current slide and activate corresponding indicator
+        slides[slideIndex - 1].classList.add('active');
+        indicators[slideIndex - 1].classList.add('active');
+
+        // Update counter
+        if (currentSlideDisplay) {
+            currentSlideDisplay.textContent = slideIndex;
         }
 
-        // Auto slide functionality (optional)
-        function autoSlide() {
-            slideIndex++;
-            showSlide(slideIndex);
-        }
+        console.log(`Showing slide ${slideIndex}`); // Debug log
+    }
 
-        // Uncomment the line below if you want auto-sliding every 5 seconds
-        // setInterval(autoSlide, 5000);
+    // Function to change slides
+    function changeSlide(n) {
+        console.log(`Button clicked, changing slide by ${n}`); // Debug log
+        showSlide(slideIndex + n);
+    }
 
-        // Keyboard navigation
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'ArrowLeft') {
-                changeSlide(-1);
-            } else if (event.key === 'ArrowRight') {
-                changeSlide(1);
-            }
+    // Function to jump to a specific slide
+    function currentSlide(n) {
+        console.log(`Navigating to slide ${n}`); // Debug log
+        showSlide(n);
+    }
+
+    // Attach event listeners to buttons
+    if (prevButton) {
+        prevButton.addEventListener('click', function() {
+            changeSlide(-1);
         });
+    } else {
+        console.error('Previous button not found');
+    }
 
-        // Touch/swipe support for mobile
-        let touchStartX = 0;
-        let touchEndX = 0;
+    if (nextButton) {
+        nextButton.addEventListener('click', function() {
+            changeSlide(1);
+        });
+    } else {
+        console.error('Next button not found');
+    }
 
-        const sliderWrapper = document.querySelector('.slider-wrapper');
+    // Attach event listeners to indicators
+    for (let i = 0; i < indicators.length; i++) {
+        indicators[i].addEventListener('click', function() {
+            currentSlide(i + 1);
+        });
+    }
 
+    // Initialize the first slide
+    showSlide(slideIndex);
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+
+    if (sliderWrapper) {
         sliderWrapper.addEventListener('touchstart', function(event) {
             touchStartX = event.changedTouches[0].screenX;
+            console.log('Touch start:', touchStartX); // Debug log
         });
 
         sliderWrapper.addEventListener('touchend', function(event) {
             touchEndX = event.changedTouches[0].screenX;
             handleSwipe();
         });
+    }
 
-        function handleSwipe() {
-            if (touchEndX < touchStartX - 50) {
-                changeSlide(1); // Swipe left, next slide
-            }
-            if (touchEndX > touchStartX + 50) {
-                changeSlide(-1); // Swipe right, previous slide
-            }
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            console.log('Swiped left'); // Debug log
+            changeSlide(1); // Swipe left, next slide
         }
-    </script>
+        if (touchEndX > touchStartX + 50) {
+            console.log('Swiped right'); // Debug log
+            changeSlide(-1); // Swipe right, previous slide
+        }
+    }
+
+    // Optional: Auto-slide every 5 seconds
+    // setInterval(function() {
+    //     changeSlide(1);
+    // }, 5000);
+
+    // Optional: Keyboard navigation
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+            console.log('Left arrow pressed'); // Debug log
+            changeSlide(-1);
+        } else if (event.key === 'ArrowRight') {
+            console.log('Right arrow pressed'); // Debug log
+            changeSlide(1);
+        }
+    });
+});
+</script>
 </body>
 </html>
