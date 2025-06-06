@@ -159,21 +159,10 @@
             font-size: clamp(1rem, 2vw, 1.3rem);
             opacity: 0.9;
         }
-        
-        .benefit-grid {
-            display: grid;
-            gap: 20px;
-            margin: 40px 0 70px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+      
         
         @media (max-width: 639px) {
-            .benefit-grid {
-                grid-template-columns: 1fr;
-                padding: 20px 15px; /* Standardized mobile padding */
-            }
+        
             .logo-container {
                 max-width: 280px;
             }
@@ -181,51 +170,88 @@
                 max-height: 70px;
             }
         }
-        
-        @media (min-width: 640px) and (max-width: 1023px) {
-            .benefit-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .benefit-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 30px;
-            }
-        }
-        
-        .benefit-card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.05);
-            text-align: center;
-            margin-bottom: 10px;
-            height: 100%;
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px -5px rgba(0,87,160,0.25);
-        }
-        
-        .benefit-icon {
-            width: 60px;
-            height: 60px;
-                background: #4c4c4c;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 28px;
-            box-shadow: 0 4px 8px rgba(0,87,160,0.2);
-        }
+    
+        .benefit-grid {
+    display: grid;
+    gap: 25px;
+    margin: 20px 0 70px;
+}
+
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .benefit-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 15px;
+    }
+}
+
+.benefit-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    text-align: center;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,84,164,0.15);
+    border-color: rgba(0,84,164,0.1);
+}
+
+.benefit-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #6dc14c;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover:before {
+    opacity: 1;
+}
+
+.benefit-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-image {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.benefit-card h3 {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--primary-dark);
+}
+
+.benefit-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+     
         
         .floating-cta {
             position: fixed;
@@ -879,36 +905,40 @@
 
         <!-- Benefits Grid -->
         <div class="benefit-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon"><span class="material-icons">energy_savings_leaf</span></div>
-                <h3>Energy Efficiency</h3>
-                <p>Save up to 40% on energy bills with our high-performance windows</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"><span class="material-icons">verified</span></div>
-                <h3>Lifetime Warranty</h3>
-                <p>Our industry-leading warranty backs every installation</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"><span class="material-icons">home</span></div>
-                <h3>Home Value</h3>
-                <p>Increase your property value with quality replacements</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"><span class="material-icons">palette</span></div>
-                <h3>Custom Designs</h3>
-                <p>Choose from hundreds of style and color combinations</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"><span class="material-icons">calendar_today</span></div>
-                <h3>Fast Installation</h3>
-                <p>Most projects completed in just one day</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"><span class="material-icons">security</span></div>
-                <h3>Enhanced Security</h3>
-                <p>Premium hardware with multi-point locking systems</p>
-            </div>
+        <div class="benefit-card">
+            <img src="https://via.placeholder.com/400x200" alt="Energy Savings" class="benefit-image">
+            <h3>Energy Savings</h3>
+            <p>Reduce energy costs by up to 40% with our premium windows and patio doors</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="https://via.placeholder.com/400x200" alt="Lifetime Warranty" class="benefit-image">
+            <h3>Lifetime Warranty</h3>
+            <p>Industry's strongest warranty for windows and doors</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="https://via.placeholder.com/400x200" alt="Home Value" class="benefit-image">
+            <h3>Home Value</h3>
+            <p>Increase property value with quality installation</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="https://via.placeholder.com/400x200" alt="Storm Protection" class="benefit-image">
+            <h3>Storm Protection</h3>
+            <p>Impact-resistant windows and doors available</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="https://via.placeholder.com/400x200" alt="Custom Designs" class="benefit-image">
+            <h3>Custom Designs</h3>
+            <p>Hundreds of style/color combinations for both</p>
+        </div>
+        
+        <div class="benefit-card">
+            <img src="https://via.placeholder.com/400x200" alt="Fast Installation" class="benefit-image">
+            <h3>Fast Installation</h3>
+            <p>Most window and door projects completed in 1 day</p>
         </div>
     </div>
 
