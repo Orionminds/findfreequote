@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free RBA Window & Door Quotes - $400 Off Windows, $800 Off Doors | FindFreeQuote</title>
+    <meta name="description" content="Get free quotes from Renewal by Andersen partners. Save $400 on windows and $800 on doors with professional installation and lifetime warranties.">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NGM4Q5FN');</script>
+    <!-- End Google Tag Manager -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #7cb342;
+            --dark-green: #2c5530;
+            --light-gray: #f8f9fa;
+            --medium-gray: #666;
+            --border-color: #ddd;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        /* Header - Sticky & Optimized */
+        .header {
+            background: #fff;
+            padding: 12px 0;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark-green);
+            text-decoration: none;
+        }
+        
+        .logo::before {
+            content: "🔍";
+            margin-right: 8px;
+        }
+        
+        .header-cta {
+            background: var(--primary-green);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .header-cta:hover {
+            background: #689f38;
+            transform: translateY(-1px);
+        }
+        
+        /* Hero Section - Optimized */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-green) 0%, #4a7c59 100%);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="1.5" fill="white" opacity="0.1"/></svg>');
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            margin-bottom: 16px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: clamp(16px, 3vw, 20px);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            background: var(--primary-green);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(124, 179, 66, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #689f38;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(124, 179, 66, 0.4);
+        }
+        
+        /* Benefits Section - Grid Optimized */
+        .benefits {
+            padding: 60px 0;
+            background: var(--light-gray);
+        }
+        
+        .benefits h2 {
+            text-align: center;
+            font-size: clamp(24px, 4vw, 32px);
+            color: var(--dark-green);
+            margin-bottom: 48px;
+            font-weight: 600;
+        }
+        
+        /* Benefits Section - Slider Format for All Devices */
+        .benefits-container {
+            position: relative;
+            margin-bottom: 48px;
+            overflow: hidden;
+        }
+        
+        .benefits-slider {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 400%;
+        }
+        
+        .benefit-item {
+            text-align: center;
+            padding: 24px 16px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            flex: 0 0 25%;
+            width: 25%;
+            box-sizing: border-box;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .benefits-slider-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .benefits-slider-btn {
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        
+        .benefits-slider-btn:hover {
+            background: #689f38;
+            transform: scale(1.1);
+        }
+        
+        .benefits-slider-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: scale(1);
+        }
+        
+        .benefits-slider-dots {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .benefits-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .benefits-dot.active {
+            background: var(--primary-green);
+            transform: scale(1.2);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        
+        .benefit-item h3 {
+            font-size: 18px;
+            color: var(--dark-green);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .benefit-item p {
+            color: var(--medium-gray);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* Call-to-Action Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--dark-green) 0%, #4a7c59 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="1.5" fill="white" opacity="0.1"/></svg>');
+            pointer-events: none;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .cta-section h2 {
+            font-size: clamp(24px, 4vw, 36px);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        .cta-section p {
+            font-size: clamp(16px, 3vw, 18px);
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+        
+        .cta-button.large {
+            padding: 20px 40px;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        
+        .cta-disclaimer {
+            font-size: 14px !important;
+            opacity: 0.8 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        /* Trust Section - Lightweight */
+        .trust {
+            padding: 60px 0;
+            background: var(--light-gray);
+        }
+        
+        .trust h2 {
+            text-align: center;
+            font-size: clamp(24px, 4vw, 32px);
+            color: var(--dark-green);
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+        
+        .reviews-container {
+            position: relative;
+            margin-bottom: 48px;
+            overflow: hidden;
+        }
+        
+        .reviews-slider {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 500%;
+        }
+        
+        .review-item {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-green);
+            flex: 0 0 20%;
+            width: 20%;
+            box-sizing: border-box;
+        }
+        
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .slider-btn {
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        
+        .slider-btn:hover {
+            background: #689f38;
+            transform: scale(1.1);
+        }
+        
+        .slider-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: scale(1);
+        }
+        
+        .slider-dots {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dot.active {
+            background: var(--primary-green);
+            transform: scale(1.2);
+        }
+        
+        .stars {
+            color: #ffc107;
+            font-size: 16px;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+        
+        .review-text {
+            font-style: italic;
+            margin-bottom: 12px;
+            color: var(--medium-gray);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .reviewer {
+            font-weight: 600;
+            color: var(--dark-green);
+            font-size: 14px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            padding: 12px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            font-weight: 500;
+            color: var(--dark-green);
+            font-size: 14px;
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        /* Footer - Minimized */
+        .footer {
+            background: var(--dark-green);
+            color: white;
+            padding: 40px 0 24px;
+            text-align: center;
+        }
+        
+        .footer-brand {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .footer-links {
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .disclaimer {
+            font-size: 12px;
+            color: rgba(255,255,255,0.7);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 12px;
+            }
+            
+            .hero {
+                padding: 80px 0 50px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .header-content {
+                gap: 12px;
+            }
+            
+            .header-cta {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+            
+            .benefits-grid {
+                gap: 16px;
+            }
+            
+            .benefit-item {
+                padding: 20px 12px;
+            }
+            
+            .lead-form {
+                padding: 24px 16px;
+            }
+            
+            .trust-badges {
+                gap: 12px;
+            }
+            
+            .trust-badge {
+                min-width: 100px;
+                font-size: 12px;
+                padding: 10px 16px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+        
+        /* Performance Optimizations */
+        .benefit-item,
+        .review-item,
+        .trust-badge {
+            will-change: transform;
+        }
+        
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .header,
+            .footer {
+                display: none;
+            }
+            
+            .hero {
+                background: none;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGM4Q5FN"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">FindFreeQuote</a>
+                <a href="https://www.renewalbyandersen.com/free-consultation" target="_blank" class="header-cta" onclick="trackEvent('cta_click', 'Lead Generation', 'Header CTA Redirect')">Get Free Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Get Free RBA Window & Door Replacement Quotes</h1>
+                <p>Connect with certified Renewal by Andersen partners. Save $400 per window and $800 per door with professional installation and lifetime warranties.</p>
+                <a href="https://www.renewalbyandersen.com/free-consultation" target="_blank" class="cta-button" onclick="trackEvent('cta_click', 'Lead Generation', 'Hero CTA Redirect')">Claim Your Discounts →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2>Why Choose RBA Certified Partners</h2>
+            <div class="benefits-container">
+                <div class="benefits-slider" id="benefitsSlider">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">💰</span>
+                        <h3>$400 Off Per Window</h3>
+                        <p>Exclusive discount on RBA energy-efficient window replacements. Limited time offer through certified partners.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🚪</span>
+                        <h3>$800 Off Per Door</h3>
+                        <p>Save big on premium door installations. Professional fitting with RBA's signature quality standards.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🔧</span>
+                        <h3>RBA Certified Installation</h3>
+                        <p>Factory-trained professionals using RBA's proven installation methods and premium materials.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🛡️</span>
+                        <h3>RBA Warranty Protection</h3>
+                        <p>Comprehensive RBA warranties on materials and workmanship backed by a trusted national brand.</p>
+                    </div>
+                </div>
+                
+                <div class="benefits-slider-controls">
+                    <button class="benefits-slider-btn" id="benefitsPrevBtn">‹</button>
+                    <div class="benefits-slider-dots" id="benefitsSliderDots"></div>
+                    <button class="benefits-slider-btn" id="benefitsNextBtn">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Save $400 on Windows & $800 on Doors?</h2>
+                <p>Get connected with RBA certified partners now. Limited time exclusive discounts available.</p>
+                <a href="https://www.renewalbyandersen.com/free-consultation" target="_blank" class="cta-button large" onclick="trackEvent('cta_click', 'Lead Generation', 'Final CTA Redirect')">Get My RBA Quote & Discounts Now</a>
+                <p class="cta-disclaimer">*Discounts available through participating RBA partners. Minimum purchase requirements may apply.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust">
+        <div class="container">
+            <h2>Trusted RBA Partner Network</h2>
+            
+            <div class="reviews-container">
+                <div class="reviews-slider" id="reviewsSlider">
+                    <div class="review-item">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Found an amazing RBA certified contractor through FindFreeQuote. Saved $1,600 on our 4 new windows with the discount!"</p>
+                        <p class="reviewer">Sarah M., Austin, TX</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"The RBA door replacement was flawless. $800 discount made it very affordable and the quality is outstanding."</p>
+                        <p class="reviewer">Mike R., Denver, CO</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"RBA financing plus the window discounts made our whole-house upgrade possible. Professional installation from start to finish."</p>
+                        <p class="reviewer">Jennifer L., Phoenix, AZ</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Got connected with a certified RBA partner in 24 hours. Saved thousands with both window and door discounts!"</p>
+                        <p class="reviewer">David K., Seattle, WA</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"The RBA warranty and quality are unmatched. FindFreeQuote made finding a certified installer so easy."</p>
+                        <p class="reviewer">Lisa H., Miami, FL</p>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevBtn">‹</button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-btn" id="nextBtn">›</button>
+                </div>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="trust-badge">🏆 RBA Authorized</div>
+                <div class="trust-badge">⭐ Factory Certified</div>
+                <div class="trust-badge">🛡️ RBA Warranty</div>
+                <div class="trust-badge">📞 Free Consultation</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">FindFreeQuote.com</div>
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/contact">Contact</a>
+                <a href="/about">About Us</a>
+            </div>
+            <div class="disclaimer">
+                <p><strong>Partner Disclosure:</strong> FindFreeQuote.com connects homeowners with certified Renewal by Andersen (RBA) authorized dealers and partners. We are an independent lead generation platform working in partnership with RBA's network. Discounts of $400 per window and $800 per door are offered through participating RBA partners. Individual results, pricing, and availability may vary by location. Minimum purchase requirements may apply.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Benefits slider functionality - Works on all devices
+        class BenefitsSlider {
+            constructor() {
+                this.slider = document.getElementById('benefitsSlider');
+                this.prevBtn = document.getElementById('benefitsPrevBtn');
+                this.nextBtn = document.getElementById('benefitsNextBtn');
+                this.dotsContainer = document.getElementById('benefitsSliderDots');
+                this.benefits = this.slider.querySelectorAll('.benefit-item');
+                this.currentIndex = 0;
+                this.autoSlideInterval = null;
+                
+                this.init();
+            }
+            
+            init() {
+                this.createDots();
+                this.setupEventListeners();
+                this.updateSlider();
+                this.startAutoSlide();
+            }
+            
+            createDots() {
+                this.dotsContainer.innerHTML = '';
+                // Always create 4 dots for 4 benefits
+                for (let i = 0; i < 4; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'benefits-dot';
+                    dot.addEventListener('click', () => this.goToSlide(i));
+                    this.dotsContainer.appendChild(dot);
+                }
+            }
+            
+            setupEventListeners() {
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                // Touch/swipe support
+                let startX = 0;
+                let endX = 0;
+                
+                this.slider.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    this.stopAutoSlide();
+                });
+                
+                this.slider.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                    }
+                    this.startAutoSlide();
+                });
+                
+                // Pause auto-slide on hover
+                this.slider.addEventListener('mouseenter', () => this.stopAutoSlide());
+                this.slider.addEventListener('mouseleave', () => this.startAutoSlide());
+            }
+            
+            updateSlider() {
+                const translateX = -this.currentIndex * 25;
+                this.slider.style.transform = `translateX(${translateX}%)`;
+                
+                // Update dots
+                this.dotsContainer.querySelectorAll('.benefits-dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentIndex);
+                });
+                
+                // No disabled buttons - continuous loop
+                this.prevBtn.disabled = false;
+                this.nextBtn.disabled = false;
+            }
+            
+            goToSlide(index) {
+                this.currentIndex = index;
+                this.updateSlider();
+            }
+            
+            nextSlide() {
+                if (this.currentIndex < 3) {
+                    this.currentIndex++;
+                } else {
+                    this.currentIndex = 0; // Loop back to first
+                }
+                this.updateSlider();
+            }
+            
+            prevSlide() {
+                if (this.currentIndex > 0) {
+                    this.currentIndex--;
+                } else {
+                    this.currentIndex = 3; // Loop to last
+                }
+                this.updateSlider();
+            }
+            
+            startAutoSlide() {
+                this.autoSlideInterval = setInterval(() => {
+                    this.nextSlide();
+                }, 3500); // Slightly faster than reviews
+            }
+            
+            stopAutoSlide() {
+                if (this.autoSlideInterval) {
+                    clearInterval(this.autoSlideInterval);
+                    this.autoSlideInterval = null;
+                }
+            }
+        }
+
+        // Reviews slider functionality
+        class ReviewsSlider {
+            constructor() {
+                this.slider = document.getElementById('reviewsSlider');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.dotsContainer = document.getElementById('sliderDots');
+                this.reviews = this.slider.querySelectorAll('.review-item');
+                this.currentIndex = 0;
+                this.autoSlideInterval = null;
+                
+                this.init();
+            }
+            
+            init() {
+                this.createDots();
+                this.setupEventListeners();
+                this.updateSlider();
+                this.startAutoSlide();
+            }
+            
+            createDots() {
+                this.reviews.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.className = 'dot';
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                    this.dotsContainer.appendChild(dot);
+                });
+            }
+            
+            setupEventListeners() {
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                // Touch/swipe support
+                let startX = 0;
+                let endX = 0;
+                
+                this.slider.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    this.stopAutoSlide();
+                });
+                
+                this.slider.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                    }
+                    this.startAutoSlide();
+                });
+                
+                // Pause auto-slide on hover
+                this.slider.addEventListener('mouseenter', () => this.stopAutoSlide());
+                this.slider.addEventListener('mouseleave', () => this.startAutoSlide());
+            }
+            
+            updateSlider() {
+                const translateX = -this.currentIndex * 20;
+                this.slider.style.transform = `translateX(${translateX}%)`;
+                
+                // Update dots
+                this.dotsContainer.querySelectorAll('.dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentIndex);
+                });
+                
+                // Update buttons (no disabled state for looping)
+                this.prevBtn.disabled = false;
+                this.nextBtn.disabled = false;
+            }
+            
+            goToSlide(index) {
+                this.currentIndex = index;
+                this.updateSlider();
+            }
+            
+            nextSlide() {
+                if (this.currentIndex < this.reviews.length - 1) {
+                    this.currentIndex++;
+                } else {
+                    this.currentIndex = 0; // Loop back to first
+                }
+                this.updateSlider();
+            }
+            
+            prevSlide() {
+                if (this.currentIndex > 0) {
+                    this.currentIndex--;
+                } else {
+                    this.currentIndex = this.reviews.length - 1; // Loop to last
+                }
+                this.updateSlider();
+            }
+            
+            startAutoSlide() {
+                this.autoSlideInterval = setInterval(() => {
+                    this.nextSlide();
+                }, 4000); // Change slide every 4 seconds
+            }
+            
+            stopAutoSlide() {
+                if (this.autoSlideInterval) {
+                    clearInterval(this.autoSlideInterval);
+                    this.autoSlideInterval = null;
+                }
+            }
+        }
+
+        // Optimized smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Optimized form handling - Now handles redirects
+        document.addEventListener('DOMContentLoaded', () => {
+            // Track CTA button clicks with redirect
+            document.querySelectorAll('.cta-button, .header-cta').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const label = this.classList.contains('header-cta') ? 'Header CTA Redirect' : 
+                                 this.classList.contains('large') ? 'Final CTA Redirect' : 'Hero CTA Redirect';
+                    
+                    trackEvent('cta_click', 'Lead Generation', label);
+                    
+                    // Track redirect event to GTM
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'redirect_to_advertiser',
+                        'destination_url': this.href,
+                        'cta_location': label,
+                        'page_url': window.location.href
+                    });
+                });
+            });
+        });
+
+        // Initialize sliders
+        document.addEventListener('DOMContentLoaded', () => {
+            new BenefitsSlider();
+            new ReviewsSlider();
+        });
+
+        // Lazy loading for performance (excluding slider items)
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Only observe non-slider elements
+            document.querySelectorAll('.trust-badge').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+        }
+
+        // Enhanced event tracking with GTM integration for redirects
+        function trackEvent(event, category, label = '') {
+            // Push event to Google Tag Manager dataLayer
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': event,
+                'event_category': category,
+                'event_label': label,
+                'page_url': window.location.href,
+                'page_title': document.title,
+                'timestamp': new Date().toISOString()
+            });
+            
+            console.log(`GTM Event: ${event}, Category: ${category}, Label: ${label}`);
+        }
+    </script>
+</body>
+</html>
