@@ -426,7 +426,7 @@
            data-track="quote-button" 
            class="cta-button" 
            id="unlockCta" 
-           onclick="uetq.push('event', 'PopupQuoteClick', {event_category: 'Engagement', event_label: 'FreeQuote'}); return gtag_report_conversion('https://www.askhomequote.com/c/da2955792faaf?subsource=1006')">
+           onclick="uetq.push('event', 'PopupQuoteClick', {event_category: 'Engagement', event_label: 'FreeQuote'}); setTimeout(function(){ gtag_report_conversion('https://www.askhomequote.com/c/da2955792faaf?subsource=1006'); }, 300); return false;">
             <span class="material-icons unlock-icon">lock_open</span>
             <span>Claim Offer Now</span>
         </a>
