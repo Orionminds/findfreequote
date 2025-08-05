@@ -1698,7 +1698,7 @@
      data-track="quote-button" 
      class="cta-button" 
      id="unlockCta" 
-     onclick="delayedRedirect(event)">
+     onclick="return delayedRedirect(event, 'MainCTAClick')">
     <span class="material-icons unlock-icon">lock_open</span>
     <span>GET FREE QUOTE</span>
   </a>
@@ -1707,19 +1707,42 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
-  function delayedRedirect(event) {
-    event.preventDefault(); // Stop the default link behavior
-
+  
+function delayedRedirect(event, eventName) {
+    event.preventDefault();
     const url = event.currentTarget.href;
 
-    // Optional: Send your analytics event
-    sendBingAndGoogleEvent('MainCTAClick', url);
+    let eventFired = false;
 
-    // Redirect after 2 seconds
+    // Fire Bing event
+    if (typeof uetq !== "undefined") {
+        uetq.push('event', eventName, {
+            'revenue_value': 0,
+            'currency': 'USD'
+        });
+        eventFired = true;
+        console.log("✅ Bing Event Fired:", eventName);
+    }
+
+    // Fire Google Ads event
+    if (typeof gtag !== "undefined") {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_',
+            'event_callback': function() {
+                if (!eventFired) {
+                    console.log("✅ Google Ads Event Fired:", eventName);
+                }
+                window.location = url;
+            }
+        });
+    }
+
+    // Fallback redirect after 1.5s
     setTimeout(() => {
-      window.location.href = url;
-    }, 2000);
-  }
+        window.location = url;
+    }, 1500);
+}
+
 
   
 function sendBingAndGoogleEvent(eventName, url) {
@@ -1793,7 +1816,7 @@ function sendBingAndGoogleEvent(eventName, url) {
            data-track="quote-button" 
            class="cta-button" 
            id="unlockCta" 
-           onclick="return sendBingAndGoogleEvent('PopCTAClick', this.href)">
+           onclick="return delayedRedirect(event, 'PopCTAClick')">
             <span class="material-icons unlock-icon">lock_open</span>
             <span>Claim Offer Now</span>
         </a>
