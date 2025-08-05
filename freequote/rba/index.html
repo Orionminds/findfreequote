@@ -16,7 +16,43 @@
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NGM4Q5FN');</script>
+    })(window,document,'script','dataLayer','GTM-NGM4Q5FN');
+function delayedRedirect(event, eventName) {
+    event.preventDefault();
+    const url = event.currentTarget.href;
+    const TEST_MODE = true; // Set to false for live ads
+
+    // ---- Bing UET Event ----
+    if (typeof uetq !== "undefined") {
+        uetq.push('event', eventName, {
+            'revenue_value': 0,
+            'currency': 'USD'
+        });
+        console.log("✅ Bing UET Event Fired:", eventName);
+    } else {
+        console.warn("⚠️ Bing UET not found");
+    }
+
+    // ---- Google Ads Conversion Event ----
+    if (typeof gtag !== "undefined") {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_'
+        });
+        console.log("✅ Google Ads Conversion Event Fired:", eventName);
+    } else {
+        console.warn("⚠️ Google Ads gtag not found");
+    }
+
+    if (!TEST_MODE) {
+        setTimeout(() => {
+            window.location = url;
+        }, 1500);
+    } else {
+        console.log("🔍 TEST_MODE ON — No redirect, just tracking");
+    }
+}
+
+</script>
     <!-- End Google Tag Manager -->
     
     <!-- Microsoft UET Tag -->
@@ -1709,21 +1745,6 @@
     <script>
   
 
-function delayedRedirect(event, eventName) {
-    event.preventDefault();
-    const url = event.currentTarget.href;
-    const TEST_MODE = true; // Set to false for live ads
-
-    // ---- Bing UET Event ----
-    if (typeof uetq !== "undefined") {
-        uetq.push('event', eventName, {
-            'revenue_value': 0,
-            'currency': 'USD'
-        });
-        console.log("✅ Bing UET Event Fired:", eventName);
-    } else {
-        console.warn("⚠️ Bing UET not found");
-    }
 
     // ---- Google Ads Conversion Event ----
     if (typeof gtag !== "undefined") {
@@ -1746,143 +1767,7 @@ function delayedRedirect(event, eventName) {
 }
 
 
-    // Fire Google Ads event
-    if (typeof gtag !== "undefined") {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_',
-            'event_callback': function() {
-                if (!eventFired) {
-                    console.log("✅ Google Ads Event Fired:", eventName);
-                }
-                window.location = url;
-            }
         });
-    }
-
-    // Fallback redirect after 1.5s
-    setTimeout(() => {
-        window.location = url;
-    }, 1500);
-}
-
-
-  
-        });
-        console.log("✅ Google Ads Conversion Event Fired:", eventName);
-    }
-
-    return false; // Stop default click until callback runs
-}
-
-</script>
-    <script>
-        $(document).ready(function(){
-            $("#reviewCarousel").owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    769: {
-                        items: 2
-                    },
-                    1025: {
-                        items: 3
-                    }
-                }
-            });
-        });
-    </script>
-    <!-- Google Ads Conversion Tracking Script -->
- <div class="popup-overlay" id="popupOverlay">
-        <div class="popup-content">
-            <button class="close-btn" id="closeBtn">&times;</button>
-            
-            <div class="popup-image">
-              
-            </div>
-            
-            <div class="popup-title">
-                Get $400 Off on Windows & $850 Off on Doors
-            </div>
-            
-            <div class="popup-subtitle">
-                Limited Time Offer – Valid Till 31/08/2025
-            </div>
-            
-           <a href="https://www.askhomequote.com/c/da2955792faaf?subsource=1006&msclkid={MSCLKID}" 
-           data-track="quote-button" 
-           class="cta-button" 
-           id="unlockCta" 
-           onclick="return delayedRedirect(event, 'PopCTAClick')">
-            <span class="material-icons unlock-icon">lock_open</span>
-            <span>Claim Offer Now</span>
-        </a>
-        </div>
-    </div>
-
-    <script>
-        // Show popup after 7 seconds
-        setTimeout(() => {
-            const overlay = document.getElementById('popupOverlay');
-            const mainContent = document.getElementById('mainContent');
-            
-            // Show popup and blur background
-            overlay.classList.add('show');
-            mainContent.classList.add('blurred');
-        }, 15000);
-
-        // Close popup functionality
-        function closePopup() {
-            const overlay = document.getElementById('popupOverlay');
-            const mainContent = document.getElementById('mainContent');
-            
-            overlay.classList.remove('show');
-            mainContent.classList.remove('blurred');
-        }
-
-        // Close button event
-        document.getElementById('closeBtn').addEventListener('click', closePopup);
-
-        // Close when clicking outside popup
-        document.getElementById('popupOverlay').addEventListener('click', (e) => {
-            if (e.target === e.currentTarget) {
-                closePopup();
-            }
-        });
-
-        // Claim button action
-        document.getElementById('claimBtn').addEventListener('click', () => {
-            alert('Offer claimed! Contact us to proceed with your order.');
-            closePopup();
-        });
-
-        // Close popup with Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closePopup();
-            }
-        });
-    </script>
- 
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const cta = document.getElementById('unlockCta');
-      if (cta) {
-        cta.addEventListener('click', function () {
-          gtag('event', 'get_quote_click', {
-            event_category: 'engagement',
-            event_label: 'Unlock CTA Click',
-            value: 1
-          });
-        });
-      }
-    });
     </script>
 
     <script>
