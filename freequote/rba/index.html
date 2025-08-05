@@ -1373,7 +1373,7 @@
                             <a href="https://www.askhomequote.com/c/da2955792faaf?subsource=1006&msclkid={MSCLKID}" 
                                data-track="quote-button" 
                                id="unlockCta" 
-                              onclick="return sendBingAndGoogleEvent('MainCTAClick', this.href)"
+                              onclick="return delayedRedirect(event, 'MainCTAClick')"
                                class="small-button">Get Free Estimate</a>
                         </div>
                     </div>
@@ -1394,7 +1394,7 @@
                             <a href="https://www.askhomequote.com/c/da2955792faaf?subsource=1006&msclkid={MSCLKID}" 
                                data-track="quote-button" 
                                id="unlockCta" 
-                               onclick="return sendBingAndGoogleEvent('MainCTAClick', this.href)" 
+                               onclick="return delayedRedirect(event, 'MainCTAClick')" 
                                class="small-button">Get Free Estimate</a>
                         </div>
                     </div>
@@ -1447,7 +1447,7 @@
                             <a href="https://www.askhomequote.com/c/da2955792faaf?subsource=1006&msclkid={MSCLKID}" 
                                data-track="quote-button" 
                                id="unlockCta" 
-                               onclick="return sendBingAndGoogleEvent('MainCTAClick', this.href)" 
+                               onclick="return delayedRedirect(event, 'MainCTAClick')" 
                                class="small-button">Book a Free Consultation</a>
                         </div>
     <!-- Testimonials Section -->
@@ -1712,32 +1712,36 @@
 function delayedRedirect(event, eventName) {
     event.preventDefault();
     const url = event.currentTarget.href;
-    const TEST_MODE = true; // Set to false for live redirect
+    const TEST_MODE = true; // Set to false for live ads
 
-    // Fire Bing event
+    // ---- Bing UET Event ----
     if (typeof uetq !== "undefined") {
         uetq.push('event', eventName, {
             'revenue_value': 0,
             'currency': 'USD'
         });
-        console.log("✅ Bing Event Fired:", eventName);
+        console.log("✅ Bing UET Event Fired:", eventName);
+    } else {
+        console.warn("⚠️ Bing UET not found");
     }
 
-    // Fire Google Ads event
+    // ---- Google Ads Conversion Event ----
     if (typeof gtag !== "undefined") {
         gtag('event', 'conversion', {
             'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_'
         });
         console.log("✅ Google Ads Conversion Event Fired:", eventName);
+    } else {
+        console.warn("⚠️ Google Ads gtag not found");
     }
 
     if (!TEST_MODE) {
-        // Live mode: delay redirect to allow events to fire
+        // Delay redirect for live mode
         setTimeout(() => {
             window.location = url;
         }, 1500);
     } else {
-        console.log("🔍 Test Mode ON: No redirect happening so you can check tracking.");
+        console.log("🔍 TEST_MODE ON — No redirect, just tracking");
     }
 }
 
