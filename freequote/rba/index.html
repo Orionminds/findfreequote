@@ -17,7 +17,6 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NGM4Q5FN');
-
 function delayedRedirect(event, eventName) {
     event.preventDefault();
     const url = event.currentTarget.href;
@@ -33,26 +32,6 @@ function delayedRedirect(event, eventName) {
     } else {
         console.warn("⚠️ Bing UET not found");
     }
-
-    // ---- Google Ads Conversion Event ----
-    if (typeof gtag !== "undefined") {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_'
-        });
-        console.log("✅ Google Ads Conversion Event Fired:", eventName);
-    } else {
-        console.warn("⚠️ Google Ads gtag not found");
-    }
-
-    if (!TEST_MODE) {
-        setTimeout(() => {
-            window.location = url;
-        }, 1500);
-    } else {
-        console.log("🔍 TEST_MODE ON — No redirect, just tracking");
-    }
-}
-
 
     // ---- Google Ads Conversion Event ----
     if (typeof gtag !== "undefined") {
