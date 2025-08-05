@@ -1767,25 +1767,6 @@ function delayedRedirect(event, eventName) {
 
 
   
-function sendBingAndGoogleEvent(eventName, url) {
-    // ---- Bing UET conversion event ----
-    if (typeof uetq !== "undefined") {
-        uetq.push('event', eventName, {
-            'revenue_value': 0,
-            'currency': 'USD'
-        });
-        console.log("✅ Bing UET Event Fired:", eventName);
-    }
-
-    // ---- Google Ads conversion event ----
-    if (typeof gtag !== "undefined") {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_',
-            'event_callback': function() {
-                if (url) {
-                    window.location = url;
-                }
-            }
         });
         console.log("✅ Google Ads Conversion Event Fired:", eventName);
     }
