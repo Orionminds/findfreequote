@@ -1708,11 +1708,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
   
+
 function delayedRedirect(event, eventName) {
     event.preventDefault();
     const url = event.currentTarget.href;
-
-    let eventFired = false;
+    const TEST_MODE = true; // Set to false for live redirect
 
     // Fire Bing event
     if (typeof uetq !== "undefined") {
@@ -1720,9 +1720,27 @@ function delayedRedirect(event, eventName) {
             'revenue_value': 0,
             'currency': 'USD'
         });
-        eventFired = true;
         console.log("✅ Bing Event Fired:", eventName);
     }
+
+    // Fire Google Ads event
+    if (typeof gtag !== "undefined") {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_'
+        });
+        console.log("✅ Google Ads Conversion Event Fired:", eventName);
+    }
+
+    if (!TEST_MODE) {
+        // Live mode: delay redirect to allow events to fire
+        setTimeout(() => {
+            window.location = url;
+        }, 1500);
+    } else {
+        console.log("🔍 Test Mode ON: No redirect happening so you can check tracking.");
+    }
+}
+
 
     // Fire Google Ads event
     if (typeof gtag !== "undefined") {
