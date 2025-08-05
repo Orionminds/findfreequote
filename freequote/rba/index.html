@@ -1721,11 +1721,33 @@
     }, 2000);
   }
 
-  function sendBingAndGoogleEvent(eventName, url) {
-    // Your existing tracking logic here
-    console.log(`Event sent: ${eventName} - ${url}`);
-    return true;
-  }
+  
+function sendBingAndGoogleEvent(eventName, url) {
+    // ---- Bing UET conversion event ----
+    if (typeof uetq !== "undefined") {
+        uetq.push('event', eventName, {
+            'revenue_value': 0,
+            'currency': 'USD'
+        });
+        console.log("✅ Bing UET Event Fired:", eventName);
+    }
+
+    // ---- Google Ads conversion event ----
+    if (typeof gtag !== "undefined") {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17012796761/OEu1CK-DtLkaENnaqrA_',
+            'event_callback': function() {
+                if (url) {
+                    window.location = url;
+                }
+            }
+        });
+        console.log("✅ Google Ads Conversion Event Fired:", eventName);
+    }
+
+    return false; // Stop default click until callback runs
+}
+
 </script>
     <script>
         $(document).ready(function(){
