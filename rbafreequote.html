@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Home with Premium Replacement Windows | Renewal by Andersen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #52B057 0%, #6bc96f 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: clamp(16px, 3vw, 22px);
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: #FF6B35;
+            color: white;
+            padding: 18px 45px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(255, 107, 53, 0.7);
+            }
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-primary:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .cta-primary:hover {
+            background: #FF8C42;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+            animation: none;
+        }
+
+        @keyframes popIn {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.08);
+            }
+        }
+
+        .cta-primary {
+            animation: pulse 2s ease-in-out infinite, popIn 1.5s ease-in-out infinite;
+        }
+
+        .benefits {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #52B057;
+        }
+
+        .benefit-card p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .trust-section {
+            padding: 60px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .badge {
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge-icon {
+            font-size: 32px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #6bc96f 0%, #52B057 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(26px, 4vw, 38px);
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 35px;
+            opacity: 0.95;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 36px);
+            text-align: center;
+            margin-bottom: 15px;
+            color: #52B057;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+
+            .benefits, .trust-section, .cta-section {
+                padding: 40px 20px;
+            }
+
+            .benefits-grid {
+                gap: 20px;
+            }
+
+            .benefit-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>America's #1 Window Replacement Company</h1>
+            <p class="subtitle">Save on Energy Bills with Beautiful, Custom-Fit Windows</p>
+            <a href="https://sendwiz3.com/?E=iVmY0Mbr81hFvaGb5XIsg1Q6z0694Dp4DbfaF54T%2fx8%3d&s1=0712" class="cta-primary">Get Free Quote</a>
+        </div>
+    </header>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Homeowners Choose Renewal by Andersen</h2>
+            <p class="section-subtitle">Experience the difference of premium craftsmanship</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Superior Quality</h3>
+                    <p>Fibrex® composite material is 2x stronger than vinyl and requires minimal maintenance</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Energy Savings</h3>
+                    <p>High-Performance™ Low-E4® glass reduces energy costs by up to 25%</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h3>Custom Design</h3>
+                    <p>Hundreds of color, style, and hardware options to match your home perfectly</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Industry-Leading Warranty</h3>
+                    <p>Comprehensive coverage on glass, installation, and all components</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">👷</div>
+                    <h3>Expert Installation</h3>
+                    <p>Certified installers ensure perfect fit and performance every time</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">⏱️</div>
+                    <h3>Quick Process</h3>
+                    <p>From consultation to installation, we make it easy and hassle-free</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="container">
+            <h2 class="section-title">Trusted by Millions of Homeowners</h2>
+            <div class="trust-badges">
+                <div class="badge">
+                    <span class="badge-icon">⭐</span>
+                    <span><strong>4.5+ Stars</strong><br>Average Rating</span>
+                </div>
+                <div class="badge">
+                    <span class="badge-icon">🏠</span>
+                    <span><strong>2M+ Homes</strong><br>Windows Installed</span>
+                </div>
+                <div class="badge">
+                    <span class="badge-icon">🏅</span>
+                    <span><strong>100+ Years</strong><br>Combined Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="quote">
+        <div class="container">
+            <h2>Ready to Transform Your Home?</h2>
+            <p>Get a free, no-obligation quote today. Our experts will help you find the perfect windows for your home.</p>
+            <a href="https://sendwiz3.com/?E=iVmY0Mbr81hFvaGb5XIsg1Q6z0694Dp4DbfaF54T%2fx8%3d&s1=0712" class="cta-primary">Get Free Quote</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Renewal by Andersen. All rights reserved. | <a href="#" style="color: #999;">Privacy Policy</a> | <a href="#" style="color: #999;">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>
