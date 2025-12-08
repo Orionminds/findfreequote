@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transform Your Home with Premium Replacement Windows | Renewal by Andersen</title>
+    <link rel="canonical" href="https://findfreequote.com/rbafreequote.html">
     <style>
         * {
             margin: 0;
@@ -58,7 +59,7 @@
             cursor: pointer;
             position: relative;
             overflow: hidden;
-            animation: pulse 2s ease-in-out infinite;
+            animation: pulse 2s ease-in-out infinite, popIn 1.5s ease-in-out infinite;
         }
 
         @keyframes pulse {
@@ -67,6 +68,15 @@
             }
             50% {
                 box-shadow: 0 4px 25px rgba(255, 107, 53, 0.7);
+            }
+        }
+
+        @keyframes popIn {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.08);
             }
         }
 
@@ -93,19 +103,6 @@
             transform: translateY(-2px) scale(1.05);
             box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
             animation: none;
-        }
-
-        @keyframes popIn {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.08);
-            }
-        }
-
-        .cta-primary {
-            animation: pulse 2s ease-in-out infinite, popIn 1.5s ease-in-out infinite;
         }
 
         .benefits {
@@ -233,6 +230,12 @@
             }
         }
     </style>
+    <script>
+        // URL cleanup - ensure proper URL structure
+        if (window.location.pathname === '/rbafreequote' || window.location.pathname === '/rbafreequote/') {
+            window.history.replaceState(null, '', '/rbafreequote.html');
+        }
+    </script>
 </head>
 <body>
     <header>
